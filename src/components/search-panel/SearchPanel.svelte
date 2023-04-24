@@ -10,7 +10,7 @@
   import iconSearch from '../../imgs/icon-search.svg?raw';
   import iconWizmap from '../../imgs/icon-wizmap.svg?raw';
 
-  export let searchPanelStore: Writable<SearchBarStoreValue>;
+  // export let searchPanelStore: Writable<SearchBarStoreValue>;
 
   // Components
   let component: HTMLElement | null = null;
@@ -42,7 +42,7 @@
   const initView = () => {
     initialized = true;
 
-    if (component && searchPanelStore) {
+    if (component) {
       mySearchPanel = new SearchPanel(component, searchPanelUpdated);
     }
   };

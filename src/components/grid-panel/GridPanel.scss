@@ -1,0 +1,136 @@
+@import '../../define.scss';
+
+$button-border-radius: 5px;
+
+.grid-panel-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+}
+
+.svg-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1em;
+  height: 1em;
+  color: currentColor;
+
+  pointer-events: fill;
+
+  :global(svg) {
+    fill: currentColor;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background-color: hsla(0, 100%, 100%, 0.8);
+  // font-size: $font-d1;
+  // color: $gray-300;
+
+  select {
+    color: currentColor;
+    background: none;
+    border: none;
+    -webkit-appearance: none;
+  }
+}
+
+.row-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+
+  background-color: white;
+  opacity: 0.95;
+
+  border-bottom: 1px solid $gray-200;
+  padding: 8px $panel-h-padding 6px $panel-h-padding;
+  gap: 4px;
+
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+
+  .label {
+    font-size: 1rem;
+    font-weight: 400;
+    color: $gray-600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #hidden-select {
+    display: none;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .select {
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid $gray-light-border;
+    margin: 0 4px;
+    line-height: 1.2;
+
+    select {
+      padding: 0 16px 0 6px;
+      margin: 0px;
+      border: none;
+      position: relative;
+      background-color: transparent;
+      color: $gray-600;
+      background-color: white;
+      font-weight: 400;
+
+      -moz-appearance: none;
+      -webkit-appearance: none;
+    }
+
+    &::after {
+      right: 6px;
+
+      $select-border-color: $gray-600;
+      border-right: 2px solid $select-border-color;
+      border-top: 2px solid $select-border-color;
+
+      content: '';
+      display: block;
+      height: 6px;
+      width: 6px;
+      pointer-events: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(135deg);
+      transform-origin: center;
+    }
+  }
+
+  .svg-icon {
+    fill: $gray-400;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+
+    :global(svg) {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}
