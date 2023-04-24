@@ -24,32 +24,31 @@
   height: 100%;
 }
 
-.content-container {
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-
 .header-container {
   display: flex;
   width: 100%;
-  height: 70px;
+  height: 60px;
+  background-color: $teal-800;
+}
 
-  background-color: $blue-50;
+.content-container {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
 }
 
 .search-container {
   display: flex;
-  height: 100%;
-  width: 360px;
+  flex-basis: 360px;
+  padding: $panel-v-padding $panel-h-padding;
 
   background-color: $red-50;
 }
 
 .card-container {
   display: flex;
-  width: 100%;
-  height: 100%;
+  flex-grow: 1;
+  padding: $panel-v-padding $panel-h-padding;
 
   background-color: $green-50;
 }

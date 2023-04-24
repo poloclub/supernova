@@ -6,7 +6,7 @@
 </script>
 
 <style lang="scss">
-  @import './supernova.scss';
+  @import './SuperNOVA.scss';
 </style>
 
 <div class="supernova-page">

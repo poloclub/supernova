@@ -7,17 +7,25 @@
 </style>
 
 <div class="header-wrapper" bind:this={component}>
-  <div class="left-content">
-    <div class="app-title">SuperNOVA</div>
-    <div class="app-tagline">
-      A Collection of 150 Interactive Visualization Tools for Computational
-      Notebooks
+  <div class="header-content">
+    <div class="left-content">
+      <div class="app-title">SuperNOVA</div>
+      <div class="app-tagline">
+        A Collection of 150 Interactive Visualization Tools for Computational
+        Notebooks
+      </div>
     </div>
-  </div>
 
-  <div class="right-content">
-    <div class="right-button">Code</div>
-    <div class="right-button">Paper</div>
-    <div class="right-button">Add Tool</div>
+    <div class="right-content">
+      <a class="right-button" href="https://github.com/poloclub/supernova"
+        >Code</a
+      >
+      <a class="right-button" href="https://github.com/poloclub/supernova"
+        >Paper</a
+      >
+      <a class="right-button" href="https://github.com/poloclub/supernova"
+        >Add New Tool</a
+      >
+    </div>
   </div>
 </div>
