@@ -8,7 +8,10 @@ $button-border-radius: 5px;
   flex-direction: column;
   align-items: center;
   height: 100%;
+  width: 100%;
   color: white;
+
+  gap: 12px;
 }
 
 .svg-icon {
@@ -28,9 +31,7 @@ $button-border-radius: 5px;
   }
 }
 
-$search-h-margin: 10px;
-
-$search-input-width: 200px;
+$search-h-margin: 8px;
 $search-input-height: 15px;
 $search-input-v-padding: 10px;
 
@@ -67,7 +68,7 @@ $search-bar-gap: 8px;
   #search-bar-input {
     border: none;
     margin: $search-input-v-padding 0;
-    width: $search-input-width;
+    width: 100%;
     height: $search-input-height;
 
     &:focus {
@@ -133,6 +134,54 @@ $search-bar-gap: 8px;
       &.hidden {
         opacity: 0;
         pointer-events: none;
+      }
+    }
+  }
+}
+
+.category-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+
+  .name {
+    font-size: $font-u1;
+    font-weight: 600;
+  }
+}
+
+.chips-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 6px;
+  column-gap: 6px;
+  font-size: $font-d1;
+  padding: 5px 0;
+
+  .chip {
+    padding: 1px 7px;
+    border-radius: 5px;
+    border: 1px solid hsla(0, 100%, 100%, 0.5);
+
+    user-select: none;
+    -webkit-user-select: none;
+
+    transition: background-color 75ms, border 75ms;
+
+    &:hover {
+      background-color: change-color($color: $teal-400, $lightness: 20%);
+    }
+
+    $chip-selected-color: hsl(174, 60%, 27%);
+
+    &.selected {
+      background-color: $chip-selected-color;
+      border: 1px solid $chip-selected-color;
+
+      &:hover {
+        background-color: change-color($color: $teal-400, $lightness: 28%);
       }
     }
   }

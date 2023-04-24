@@ -40,7 +40,7 @@
   @import './GridPanel.scss';
 </style>
 
-<div class="grid-panel-wrapper" bind:this={component}>
+<div class="grid-panel-wrapper" bind:this="{component}">
   <div class="row-header">
     <span class="label"
       >Showing 55 / 150 visual analytics tools, sorted by
@@ -48,11 +48,11 @@
     <span class="label">
       <div class="select" id="hidden-select">
         <select>
-          <option id="hidden-option" />
+          <option id="hidden-option"></option>
         </select>
       </div>
       <div class="select">
-        <select id="feature-num-select">
+        <select id="sort-select">
           <option value="star-">star counts (↓)</option>
           <option value="star+">star counts (↑)</option>
           <option value="date-">release dates (↓)</option>

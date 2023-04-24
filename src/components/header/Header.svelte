@@ -6,7 +6,7 @@
   @import './Header.scss';
 </style>
 
-<div class="header-wrapper" bind:this={component}>
+<div class="header-wrapper" bind:this="{component}">
   <div class="header-content">
     <div class="left-content">
       <div class="app-title">SuperNOVA</div>

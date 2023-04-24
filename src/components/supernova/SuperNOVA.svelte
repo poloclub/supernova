@@ -13,16 +13,16 @@
 
 <div class="supernova-page">
   <div id="popper-tooltip-top" class="popper-tooltip hidden" role="tooltip">
-    <span class="popper-content" />
-    <div class="popper-arrow" />
+    <span class="popper-content"></span>
+    <div class="popper-arrow"></div>
   </div>
 
   <div id="popper-tooltip-bottom" class="popper-tooltip hidden" role="tooltip">
-    <span class="popper-content" />
-    <div class="popper-arrow" />
+    <span class="popper-content"></span>
+    <div class="popper-arrow"></div>
   </div>
 
-  <div class="main-app" bind:this={component}>
+  <div class="main-app" bind:this="{component}">
     <div class="header-container">
       <Header />
     </div>
