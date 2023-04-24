@@ -1,5 +1,5 @@
 <script lang="ts">
-  import logoDiffusionDB from '../../imgs/logo-diffusiondb.svg?raw';
+  import Header from '../header/Header.svelte';
   import iconGithub from '../../imgs/icon-github.svg?raw';
 
   let component: HTMLElement | null = null;
@@ -20,13 +20,15 @@
     <div class="popper-arrow" />
   </div>
 
-  <div class="app-wrapper">
-    <div class="main-app" bind:this={component}>
-      <div class="main-app-container">Hello</div>
+  <div class="main-app" bind:this={component}>
+    <div class="header-container">
+      <Header />
+    </div>
+
+    <div class="content-container">
+      <div class="search-container">Search</div>
+
+      <div class="card-container">Card</div>
     </div>
   </div>
-
-  <div class="footer-container">Footer</div>
-
-  <div class="search-panel-container">Search</div>
 </div>

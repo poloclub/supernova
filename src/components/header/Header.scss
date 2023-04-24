@@ -1,0 +1,25 @@
+@import '../../define.scss';
+
+.header-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left-content {
+  display: flex;
+
+  .app-title {
+    font-size: 2rem;
+    font-variant: small-caps;
+  }
+}
+
+.right-content {
+  display: flex;
+  gap: 10px;
+}
