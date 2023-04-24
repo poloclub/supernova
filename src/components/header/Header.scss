@@ -9,7 +9,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
   color: white;
 }
 
@@ -24,17 +23,18 @@
 .left-content {
   display: flex;
   align-items: baseline;
-  gap: 10px;
+  gap: 8px;
 
   cursor: default;
 
   .app-title {
     font-size: 1.625rem;
     font-variant: small-caps;
+    font-weight: 600;
   }
 
   .app-tagline {
-    // font-size: 1.5rem;
+    font-size: $font-u1;
   }
 }
 
@@ -44,5 +44,9 @@
 
   a {
     color: white;
+
+    &:visited {
+      color: white;
+    }
   }
 }

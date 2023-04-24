@@ -28,7 +28,8 @@
   display: flex;
   width: 100%;
   height: 60px;
-  background-color: $teal-800;
+  background-color: $teal-900;
+  border-bottom: 1px solid hsla(0, 100%, 100%, 0.2);
 }
 
 .content-container {
@@ -39,18 +40,15 @@
 
 .search-container {
   display: flex;
-  flex-basis: 360px;
+  flex-basis: 300px;
   padding: $panel-v-padding $panel-h-padding;
-
-  background-color: $red-50;
+  background-color: $teal-900;
 }
 
 .card-container {
   display: flex;
   flex-grow: 1;
   padding: $panel-v-padding $panel-h-padding;
-
-  background-color: $green-50;
 }
 
 .popper-tooltip {

@@ -1,5 +1,6 @@
 <script lang="ts">
   import Header from '../header/Header.svelte';
+  import SearchPanel from '../search-panel/SearchPanel.svelte';
   import iconGithub from '../../imgs/icon-github.svg?raw';
 
   let component: HTMLElement | null = null;
@@ -26,7 +27,9 @@
     </div>
 
     <div class="content-container">
-      <div class="search-container">Search</div>
+      <div class="search-container">
+        <SearchPanel />
+      </div>
 
       <div class="card-container">Card</div>
     </div>
