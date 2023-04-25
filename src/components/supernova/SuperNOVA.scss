@@ -17,7 +17,7 @@
 .main-app {
   display: grid;
   grid-template-rows: 60px 1fr;
-  grid-template-columns: 300px auto;
+  grid-template-columns: 300px minmax(0px, 1fr);
   position: relative;
 
   width: 100%;
@@ -49,6 +49,9 @@
 .card-container {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
+
+  display: flex;
+  overflow-y: auto;
 }
 
 .popper-tooltip {
