@@ -9,45 +9,46 @@
   width: 100vw;
   box-sizing: border-box;
   overflow-x: hidden;
+  overflow-y: hidden;
 
   position: relative;
 }
 
 .main-app {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 300px auto;
   position: relative;
 
   width: 100%;
   height: 100%;
+
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .header-container {
+  grid-row: 1 / 2;
+  grid-column: 1 / 3;
+
   display: flex;
-  width: 100%;
-  height: 60px;
   background-color: $teal-900;
   border-bottom: 1px solid hsla(0, 100%, 100%, 0.2);
 }
 
-.content-container {
-  display: flex;
-  flex-grow: 1;
-  width: 100%;
-}
-
 .search-container {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+
   display: flex;
-  flex-basis: 300px;
   padding: $panel-v-padding $panel-h-padding;
   background-color: $teal-900;
+  overflow-y: auto;
 }
 
 .card-container {
-  display: flex;
-  flex-grow: 1;
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
 }
 
 .popper-tooltip {

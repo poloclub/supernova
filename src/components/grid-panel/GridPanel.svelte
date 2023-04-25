@@ -5,6 +5,7 @@
   import d3 from '../../utils/d3-import';
   import iconCancel from '../../imgs/icon-cancel.svg?raw';
   import iconSearch from '../../imgs/icon-search.svg?raw';
+  import supernova from '../../data/supernova.yaml';
 
   // Components
   let component: HTMLElement | null = null;
@@ -20,6 +21,8 @@
 
   onMount(() => {
     mounted = true;
+
+    console.log(supernova);
   });
 
   /**

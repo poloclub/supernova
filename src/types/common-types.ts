@@ -2,28 +2,41 @@
  * Common types.
  */
 
+export interface SuperNovaEntry {
+  name: string;
+  githubURL: string;
+  paperURL: string;
+  otherURLs: string[];
+  description: string;
+  bibtex: string;
+  sourceType: SourceString;
+  releaseYear: number;
+  communication: CommunicationString;
+  materials: MaterialString[];
+  layouts: layoutString[];
+  supportedNotebooks: NotebookString[];
+  modularity: ModularityString;
+  user: UserString;
+  implementation: ImplementationString;
+}
+
+type SourceString = 'paper' | 'package';
+type CommunicationString = 'no-comm' | 'one-way' | 'two-way';
+type MaterialString = 'runtime-data' | 'code-text' | 'external-data';
+type layoutString = 'in-cell' | 'out-of-cell';
+type ModularityString = 'monolithic' | 'modular';
+type UserString = 'data-scientist' | 'scientist' | 'educator';
+type NotebookString = 'jupyter' | 'lab' | 'colab' | 'vscode';
+type ImplementationString = 'ipywidget' | 'lab-extension' | 'html' | 'nova';
+
 export type ClipLabel =
-  | 'no-comm'
-  | 'one-way'
-  | 'two-way'
-  | 'runtime-data'
-  | 'code-text'
-  | 'external-data'
-  | 'in-cell'
-  | 'out-of-cell'
-  | 'monolithic'
-  | 'modular'
-  | 'data-scientist'
-  | 'scientist'
-  | 'educator'
-  | 'jupyter'
-  | 'lab'
-  | 'colab'
-  | 'vscode'
-  | 'ipywidget'
-  | 'lab-extension'
-  | 'html'
-  | 'nova';
+  | CommunicationString
+  | MaterialString
+  | layoutString
+  | ModularityString
+  | UserString
+  | NotebookString
+  | ImplementationString;
 
 export interface Padding {
   top: number;

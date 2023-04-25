@@ -67,7 +67,7 @@
     { label: 'external-data', name: 'External Data' }
   ];
 
-  const presentationClips: ClipItem[] = [
+  const layoutClips: ClipItem[] = [
     { label: 'in-cell', name: 'In-cell' },
     { label: 'out-of-cell', name: 'Out-of-cell' }
   ];
@@ -205,7 +205,7 @@
     <div class="category-block">
       <div class="name">Visualization Presentation</div>
       <div class="chips-container">
-        {#each presentationClips as clip, i}
+        {#each layoutClips as clip, i}
           <button
             class="chip"
             on:click="{() => clipClicked(clip.label)}"

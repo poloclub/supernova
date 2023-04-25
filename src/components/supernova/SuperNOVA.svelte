@@ -27,14 +27,12 @@
       <Header />
     </div>
 
-    <div class="content-container">
-      <div class="search-container">
-        <SearchPanel />
-      </div>
+    <div class="search-container">
+      <SearchPanel />
+    </div>
 
-      <div class="card-container">
-        <GridPanel />
-      </div>
+    <div class="card-container">
+      <GridPanel />
     </div>
   </div>
 </div>
