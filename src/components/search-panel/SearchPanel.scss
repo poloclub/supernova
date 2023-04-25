@@ -51,6 +51,7 @@ $search-bar-gap: 8px;
   align-items: center;
   pointer-events: all;
 
+  width: 100%;
   padding: 0 $search-bar-h-padding;
   border-radius: $button-border-radius;
   background-color: change-color($color: white, $alpha: 1);

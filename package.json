@@ -7,7 +7,8 @@
     "dev": "vite --port 3000",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "deploy:vercel": "sh ./publish-vercel.sh"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.1.0",
