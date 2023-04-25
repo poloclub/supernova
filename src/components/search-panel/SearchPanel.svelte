@@ -175,94 +175,96 @@
     </div>
   </div>
 
-  <div class="category-block">
-    <div class="name">Notebook Communication</div>
-    <div class="chips-container">
-      {#each commClips as clip, i}
-        <button
-          class="chip"
-          on:click="{() => clipClicked(clip.label)}"
-          class:selected="{selectedClips.has(clip.label)}">{clip.name}</button
-        >
-      {/each}
+  <div class="filter-container">
+    <div class="category-block">
+      <div class="name">Notebook Communication</div>
+      <div class="chips-container">
+        {#each commClips as clip, i}
+          <button
+            class="chip"
+            on:click="{() => clipClicked(clip.label)}"
+            class:selected="{selectedClips.has(clip.label)}">{clip.name}</button
+          >
+        {/each}
+      </div>
     </div>
-  </div>
 
-  <div class="category-block">
-    <div class="name">Visualization Material</div>
-    <div class="chips-container">
-      {#each materialClips as clip, i}
-        <button
-          class="chip"
-          on:click="{() => clipClicked(clip.label)}"
-          class:selected="{selectedClips.has(clip.label)}">{clip.name}</button
-        >
-      {/each}
+    <div class="category-block">
+      <div class="name">Visualization Material</div>
+      <div class="chips-container">
+        {#each materialClips as clip, i}
+          <button
+            class="chip"
+            on:click="{() => clipClicked(clip.label)}"
+            class:selected="{selectedClips.has(clip.label)}">{clip.name}</button
+          >
+        {/each}
+      </div>
     </div>
-  </div>
 
-  <div class="category-block">
-    <div class="name">Visualization Presentation</div>
-    <div class="chips-container">
-      {#each presentationClips as clip, i}
-        <button
-          class="chip"
-          on:click="{() => clipClicked(clip.label)}"
-          class:selected="{selectedClips.has(clip.label)}">{clip.name}</button
-        >
-      {/each}
+    <div class="category-block">
+      <div class="name">Visualization Presentation</div>
+      <div class="chips-container">
+        {#each presentationClips as clip, i}
+          <button
+            class="chip"
+            on:click="{() => clipClicked(clip.label)}"
+            class:selected="{selectedClips.has(clip.label)}">{clip.name}</button
+          >
+        {/each}
+      </div>
     </div>
-  </div>
 
-  <div class="category-block">
-    <div class="name">Modularity</div>
-    <div class="chips-container">
-      {#each modularityClips as clip, i}
-        <button
-          class="chip"
-          on:click="{() => clipClicked(clip.label)}"
-          class:selected="{selectedClips.has(clip.label)}">{clip.name}</button
-        >
-      {/each}
+    <div class="category-block">
+      <div class="name">Modularity</div>
+      <div class="chips-container">
+        {#each modularityClips as clip, i}
+          <button
+            class="chip"
+            on:click="{() => clipClicked(clip.label)}"
+            class:selected="{selectedClips.has(clip.label)}">{clip.name}</button
+          >
+        {/each}
+      </div>
     </div>
-  </div>
 
-  <div class="category-block">
-    <div class="name">Targeted Users</div>
-    <div class="chips-container">
-      {#each userClips as clip, i}
-        <button
-          class="chip"
-          on:click="{() => clipClicked(clip.label)}"
-          class:selected="{selectedClips.has(clip.label)}">{clip.name}</button
-        >
-      {/each}
+    <div class="category-block">
+      <div class="name">Targeted Users</div>
+      <div class="chips-container">
+        {#each userClips as clip, i}
+          <button
+            class="chip"
+            on:click="{() => clipClicked(clip.label)}"
+            class:selected="{selectedClips.has(clip.label)}">{clip.name}</button
+          >
+        {/each}
+      </div>
     </div>
-  </div>
 
-  <div class="category-block">
-    <div class="name">Supported Notebooks</div>
-    <div class="chips-container">
-      {#each notebookClips as clip, i}
-        <button
-          class="chip"
-          on:click="{() => clipClicked(clip.label)}"
-          class:selected="{selectedClips.has(clip.label)}">{clip.name}</button
-        >
-      {/each}
+    <div class="category-block">
+      <div class="name">Supported Notebooks</div>
+      <div class="chips-container">
+        {#each notebookClips as clip, i}
+          <button
+            class="chip"
+            on:click="{() => clipClicked(clip.label)}"
+            class:selected="{selectedClips.has(clip.label)}">{clip.name}</button
+          >
+        {/each}
+      </div>
     </div>
-  </div>
 
-  <div class="category-block">
-    <div class="name">Implementation Method</div>
-    <div class="chips-container">
-      {#each implementationClips as clip, i}
-        <button
-          class="chip"
-          on:click="{() => clipClicked(clip.label)}"
-          class:selected="{selectedClips.has(clip.label)}">{clip.name}</button
-        >
-      {/each}
+    <div class="category-block">
+      <div class="name">Implementation Method</div>
+      <div class="chips-container">
+        {#each implementationClips as clip, i}
+          <button
+            class="chip"
+            on:click="{() => clipClicked(clip.label)}"
+            class:selected="{selectedClips.has(clip.label)}">{clip.name}</button
+          >
+        {/each}
+      </div>
     </div>
   </div>
 </div>

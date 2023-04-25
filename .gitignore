@@ -16,3 +16,8 @@ gh-page
 explorer
 lite
 __pycache__
+
+metadata/*.html
+metadata/*.bib
+metadata/thumbnails
+metadata/resources

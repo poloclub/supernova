@@ -139,6 +139,17 @@ $search-bar-gap: 8px;
   }
 }
 
+.filter-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 12px;
+  overflow-y: auto;
+}
+
 .category-block {
   display: flex;
   flex-direction: column;
