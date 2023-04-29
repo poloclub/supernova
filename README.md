@@ -6,7 +6,7 @@ Design Strategies and Opportunities for Interactive Visualization in Computation
 
 <!--|<img src='https://i.imgur.com/tlkVvjt.png'>|-->
 <!-- |:---:| -->
-|<a href="TODO: Replace with arXiv link">"SuperNOVA: Design Strategies and Opportunities for Interactive Visualization in Computational Notebooks"</a>|
+|<a href="">"SuperNOVA: Design Strategies and Opportunities for Interactive Visualization in Computational Notebooks"</a>|
 
 ## Overview
 
@@ -49,7 +49,7 @@ Make sure you have the necessary information for the entry you want to add, incl
 
 3. Replace the values in the new entry with the information you have for the new paper, making sure to keep the same key names for each value.
   - If the VA tool has a BibTeX citation, add it to the `bibtext` field.
-  - Provide a brief description of the VA tool (e.g. a paper abstract, the About text from a Github repository).
+  - Provide a brief description of the VA tool in the `description` field (e.g. a paper abstract, the About text from a Github repository).
   - If the VA tool has a GitHub repository add the link to the `githubURL` field.
   - Describe the implementation of the VA tool in the `implementation` field.
   - Include the name of the VA tool in the `name` field.
