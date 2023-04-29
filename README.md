@@ -5,7 +5,7 @@
 Design Strategies and Opportunities for Interactive Visualization in Computational Notebooks
 
 <!--|<img src='https://i.imgur.com/tlkVvjt.png'>|-->
-|:---:|
+<!-- |:---:| -->
 |<a href="">"SuperNOVA: Design Strategies and Opportunities for Interactive Visualization in Computational Notebooks"</a>|
 
 ## Overview
