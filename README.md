@@ -1,47 +1,98 @@
-# Svelte + TS + Vite
+# NOVA
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+[![Github Actions Status](https://github.com/poloclub/nova/workflows/build/badge.svg)](https://github.com/poloclub/nova/actions/workflows/build.yml)
+[![license](https://img.shields.io/badge/License-MIT-brightgreen)](https://github.com/poloclub/nova/blob/master/LICENSE)
+[![pypi](https://img.shields.io/pypi/v/nova-graph?color=blue)](https://pypi.python.org/pypi/nova-graph)
+[![Lite](https://gist.githubusercontent.com/xiaohk/9b9f7c8fa162b2c3bc3251a5c9a799b2/raw/a7fca1d0a2d62c2b49f60c0217dffbd0fe404471/lite-badge-launch-small.svg)](https://poloclub.github.io/nova/notebook)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/poloclub/nova/master?urlpath=lab/tree/svelte-ts/notebook-widget/example/nova-graph.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1WPT-pjO4-qNdD-UYwrFk7DVwAl2XrHBB?usp=sharing)
+[![arxiv badge](https://img.shields.io/badge/arXiv-2205.03963-red)](https://arxiv.org/abs/2205.03963)
+<!-- [![DOI:10.1145/3491101.3519653](https://img.shields.io/badge/DOI-10.1145/3491101.3519653-blue)](https://doi.org/10.1145/3491101.3519653) -->
 
-## Recommended IDE Setup
+A simple and flexible method to create notebook-ready visual analytics tools!
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+<!-- <table>
+  <tr>
+    <td colspan="1"><img src='https://i.imgur.com/FtmHafo.png'></td>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td><a href="https://youtu.be/eMlTtloGyho">👨🏻‍🏫 Talk</a></td>
+    <td><a href="https://youtu.be/OKaPmEBzEX0">📺 Video</a></td>
+    <td><a href="https://arxiv.org/abs/2202.11086">📖 "StickyLand: breaking the linear presentation of computational Notebooks"</a></td>
+  </tr>
+</table> -->
 
-## Need an official Svelte framework?
+|<img src='https://i.imgur.com/tlkVvjt.png'>|
+|:---:|
+|<a href="https://arxiv.org/abs/2205.03963">"NOVA: A Practical Method for Creating Notebook-Ready Visual Analytics"</a>|
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+## Overview
 
-## Technical considerations
+NOVA is a simple and flexible method to adapt existing web-based visual analytics (VA) tools to support computational notebooks. Web apps are a popular medium for developing interactive visualization systems that users can access in their web browsers. NOVA converts web apps developed with diverse web technologies, such as programming languages and frameworks, to notebook widgets that end-users can easily install and use in different notebook environments.
 
-**Why use this over SvelteKit?**
+## NOVA Details
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+There are three simple steps to apply NOVA:
 
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+1. Convert the VA tool into a single HTML file
+2. Design Python wrapper API
+3. Publish the VA widget in a software repository
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+The implementation details of each step vary depending on the VA tool's development stack. We provide three detailed examples with a toy VA tool to demonstrate how to apply NOVA on VA systems developed with diverse web technologies.
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+You can navigate to the folders below and read their individual `README.md` files for implementation details.
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+|Example|Web Development Stack|Bundler|Comment|
+|:---:|:---:|:---:|:---:|
+|[`svelte-ts`](./svelte-ts/)|[Svelte](https://svelte.dev) + [SCSS](https://sass-lang.com) + [TypeScript](https://www.typescriptlang.org)|[Vite](https://vitejs.dev)|It also explains how to set up a demo page|
+|[`react-js`](./react-js/)|[React](https://reactjs.org)|[Webpack](https://webpack.js.org)||
+|[`vanilla-js`](./vanilla-js/)|HTML + CSS + JavaScript|[Rollup](https://rollupjs.org/guide/en/)||
 
-**Why include `.vscode/extensions.json`?**
+## Live Demo
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+For a live web demo of this toy VA tool, visit: <https://poloclub.github.io/nova>
 
-**Why enable `allowJs` in the TS template?**
+You can also directly try out the notebook widget in your favorite computational notebooks (e.g. Jupyter Notebook/Lab, Google Colab, and VS Code Notebook).
 
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
+Check out three live notebook demos below.
 
-**Why is HMR not preserving my local component state?**
+|Jupyter Lite|Binder|Google Colab|
+|:---:|:---:|:---:|
+|[![Lite](https://gist.githubusercontent.com/xiaohk/9b9f7c8fa162b2c3bc3251a5c9a799b2/raw/a7fca1d0a2d62c2b49f60c0217dffbd0fe404471/lite-badge-launch-small.svg)](https://poloclub.github.io/nova/notebook)|[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/poloclub/nova/master?urlpath=lab/tree/svelte-ts/notebook-widget/example/nova-graph.ipynb)|[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1WPT-pjO4-qNdD-UYwrFk7DVwAl2XrHBB?usp=sharing)|
 
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
+## Open-source VA tools that use NOVA
 
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
+If your open-source VA tool also applies NOVA to create notebook widgets, please submit a [pull request](https://github.com/poloclub/nova/pulls) to add your tool on top of this table :)
 
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+|Name|Description|
+|:---|:---|
+[Visual Auditor](https://github.com/poloclub/visual-auditor)|Interactive visualization system for identifying and understanding biases in machine learning models.|
+[TimberTrek](https://github.com/poloclub/timbertrek)|Visual analytics tool to help data scientists curate decision trees that align with their knowledge and values.
+[GAM Changer](https://github.com/interpretml/gam-changer)|Interactive visualization tool to help domain experts and data scientist easily and responsibly edit Generalized Additive Models (GAMs)|
+
+## Credits
+
+NOVA is created by <a href='https://zijie.wang/' target='_blank'>Jay Wang</a>, <a href='https://www.linkedin.com/in/dmunechika' target='_blank'>David Munechika</a>, <a href='http://www.seongmin.xyz' target='_blank'>Seongmin Lee</a>, and <a href='' target='_blank'>Polo Chau</a>.
+
+## Citation
+
+```bibTeX
+@article{wangNOVAPracticalMethod2022,
+  title = {{{NOVA}}: {{A Practical Method}} for {{Creating Notebook-Ready Visual Analytics}}},
+  shorttitle = {{{NOVA}}},
+  author = {Wang, Zijie J. and Munechika, David and Lee, Seongmin and Chau, Duen Horng},
+  year = {2022},
+  month = may,
+  journal = {arXiv:2205.03963 [cs]},
+  archiveprefix = {arXiv}
+}
 ```
+
+## License
+
+The code is available under the [MIT License](https://github.com/poloclub/nova/blob/master/LICENSE).
+
+## Contact
+
+If you have any questions, feel free to [open an issue](https://github.com/poloclub/nova/issues/new) or contact [Jay Wang](https://zijie.wang).
