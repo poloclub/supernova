@@ -4,7 +4,7 @@
 
 Design Strategies and Opportunities for Interactive Visualization in Computational Notebooks
 
-|<img src='https://i.imgur.com/tlkVvjt.png'>|
+<!--|<img src='https://i.imgur.com/tlkVvjt.png'>|-->
 |:---:|
 |<a href="">"SuperNOVA: Design Strategies and Opportunities for Interactive Visualization in Computational Notebooks"</a>|
 
@@ -13,6 +13,8 @@ Design Strategies and Opportunities for Interactive Visualization in Computation
 SuperNOVA is an interactive browser to help researchers explore existing notebook VA tools and search for design inspiration and implementation references. Anyone can easily add new notebook VA tools to this open-source explorer.
 
 ## SuperNOVA Details
+
+Computational notebooks such as Jupyter Notebook have become the de facto programming environment among data scientists. Many visualization researchers and practitioners have developed interactive visualization tools that support notebooks. However, little is known about the appropriate design of visual analytics (VA) tools in notebooks. To bridge this critical research gap, we investigate the design strategies in this space by analyzing 148 notebook VA tools and their users' feedback. SuperNOVA is an interactive browsers to help researchers explore the landscape of notebook VA tools and search for related work.
 
 ## Live Demo
 
