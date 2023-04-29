@@ -2,6 +2,8 @@
 
 [![license](https://img.shields.io/badge/License-MIT-brightgreen)](https://github.com/poloclub/supernova/blob/master/LICENSE)
 
+TODO: Add image
+
 Design Strategies and Opportunities for Interactive Visualization in Computational Notebooks
 
 <!--|<img src='https://i.imgur.com/tlkVvjt.png'>|-->
