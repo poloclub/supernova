@@ -6,7 +6,7 @@ Design Strategies and Opportunities for Interactive Visualization in Computation
 
 <!--|<img src='https://i.imgur.com/tlkVvjt.png'>|-->
 <!-- |:---:| -->
-|<a href="">"SuperNOVA: Design Strategies and Opportunities for Interactive Visualization in Computational Notebooks"</a>|
+|<a href="TODO: Replace with arXiv link">"SuperNOVA: Design Strategies and Opportunities for Interactive Visualization in Computational Notebooks"</a>|
 
 ## Overview
 
@@ -22,7 +22,44 @@ For a live web demo of SuperNOVA, visit: <https://supernova-xiaohk.vercel.app/>
 
 ## How to add an entry to SuperNOVA
 
-If your open-source interactive VA tool is also compatible in notebooks, please submit a [pull request](https://github.com/poloclub/supernova/pulls) to add your tool to SuperNOVA.
+If your open-source interactive VA tool is also compatible in notebooks, please submit a [pull request](https://github.com/poloclub/supernova/pulls) to add your tool to SuperNOVA. You can add your VA tool to the [YAML file](https://github.com/poloclub/supernova/blob/main/src/data/supernova.yaml) with the following steps:
+
+Make sure you have the necessary information for the entry you want to add, including the paper's title, authors, publication year, conference or journal name, DOI or URL, and a brief description of the paper's content.
+
+1. Open the [YAML file](https://github.com/poloclub/supernova/blob/main/src/data/supernova.yaml) where the existing entries are stored.
+2. Use the following YAML template, and paste it below the last entry:
+
+```yaml
+- bibtex:
+  communication: ''
+  description:
+  githubURL:
+  implementation: ''
+  layouts: []
+  materials: []
+  modularity: ''
+  name:
+  otherURLs: []
+  paperURL:
+  releaseYear:
+  sourceType:
+  supportedNotebooks: []
+  user: ''
+```
+
+3. Replace the values in the new entry with the information you have for the new paper, making sure to keep the same key names for each value.
+  - If the VA tool has a BibTeX citation, add it to the `bibtext` field.
+  - Provide a brief description of the VA tool (e.g. a paper abstract, the About text from a Github repository).
+  - If the VA tool has a GitHub repository add the link to the `githubURL` field.
+  - Describe the implementation of the VA tool in the `implementation` field.
+  - Include the name of the VA tool in the `name` field.
+  - If the VA tool has other relevant URLs, add those to the `otherURLs` field.
+  - If the VA tool is from an academic paper, add a link to the paper in the `paperURL` field.
+  - Include the year the VA tool was released in the `releaseYear` field.
+  - If the VA tool is from an academic paper, add "paper" to the `sourceType` field. If the VA tool is an open-source system, add "package" to the `sourceType` field.
+  - If the VA tool is compatible with a specific notebook platform, list the platform in the `supportedNotebooks` field (e.g. Jupyter, Colab, etc.).
+
+4. Save the file and make a pull request to the repository.
 
 ## Credits
 
