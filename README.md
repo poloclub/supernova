@@ -1,4 +1,4 @@
-# SuperNOVA <a href="https://poloclub.github.io/supernova/"><img align="right" src="public/favicon.svg" width="32" height="32"></img></a>
+# SuperNOVA <a href="https://poloclub.github.io/supernova/"><img align="right" src="public/favicon.svg" width="30" height="30"></img></a>
 
 
 [![Github Actions Status](https://github.com/poloclub/supernova/workflows/build/badge.svg)](https://github.com/poloclub/supernova/actions/workflows/build.yml)
@@ -26,7 +26,7 @@ SuperNOVA is an interactive browser to help researchers explore existing noteboo
 
 ## SuperNOVA Details
 
-Computational notebooks such as Jupyter Notebook have become data scientists' de facto programming environments. Many visualization researchers and practitioners have developed interactive visualization tools that support notebooks. However, little is known about the appropriate design of visual analytics (VA) tools in notebooks. To bridge this critical research gap, we investigate the design strategies in this space by analyzing 148 notebook VA tools and their users' feedback. SuperNOVA is an interactive browsers to help researchers explore the landscape of notebook VA tools and search for related work.
+Computational notebooks such as Jupyter Notebook have become data scientists' de facto programming environments. Many visualization researchers and practitioners have developed interactive visualization tools that support notebooks. However, little is known about the appropriate design of visual analytics (VA) tools in notebooks. To bridge this critical research gap, we investigate the design strategies in this space by analyzing 159 notebook VA tools and their users' feedback. SuperNOVA is an interactive browsers to help researchers explore the landscape of notebook VA tools and search for related work.
 
 ## Live Demo
 
