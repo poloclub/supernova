@@ -78,8 +78,6 @@
 
   onMount(() => {
     mounted = true;
-
-    console.log(supernova);
   });
 
   /**

@@ -23,7 +23,9 @@
       <a class="right-button" href="https://github.com/poloclub/supernova"
         >Paper</a
       >
-      <a class="right-button" href="https://github.com/poloclub/supernova"
+      <a
+        class="right-button"
+        href="https://github.com/poloclub/supernova#how-to-add-an-entry-to-supernova"
         >Add New Tool</a
       >
     </div>
