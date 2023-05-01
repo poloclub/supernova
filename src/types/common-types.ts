@@ -26,7 +26,7 @@ export interface SuperNovaEntry {
 type SourceString = 'paper' | 'package';
 type CommunicationString = 'no' | 'one-way' | 'two-way';
 type MaterialString = 'runtime' | 'code' | 'external';
-type layoutString = 'demand' | 'always';
+type layoutString = 'on-demand' | 'always-on';
 type ModularityString = 'mono' | 'modular';
 type UserString = 'data scientist' | 'scientist' | 'educator';
 type NotebookString = 'jupyter' | 'lab' | 'colab' | 'vscode';

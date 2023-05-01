@@ -2,7 +2,8 @@
   import { onMount } from 'svelte';
   import { SearchPanel } from './SearchPanel';
   import type { Writable } from 'svelte/store';
-  import type { SearchBarStoreValue } from '../../stores';
+  import type { SearchStoreValue } from '../../stores';
+  import { getSearchStoreDefaultValue } from '../../stores';
   import type { ClipLabel } from '../../types/common-types';
   import { config } from '../../config/config';
   import d3 from '../../utils/d3-import';
@@ -16,7 +17,8 @@
     name: string;
   }
 
-  // export let searchPanelStore: Writable<SearchBarStoreValue>;
+  export let searchStore: Writable<SearchStoreValue>;
+  let searchStoreValue = getSearchStoreDefaultValue();
 
   // Components
   let component: HTMLElement | null = null;
@@ -37,8 +39,8 @@
     'runtime',
     'code',
     'external',
-    'demand',
-    'always',
+    'on-demand',
+    'always-on',
     'mono',
     'modular',
     'data scientist',
@@ -68,8 +70,8 @@
   ];
 
   const layoutClips: ClipItem[] = [
-    { label: 'demand', name: 'In-cell' },
-    { label: 'always', name: 'Out-of-cell' }
+    { label: 'on-demand', name: 'In-cell' },
+    { label: 'always-on', name: 'Out-of-cell' }
   ];
 
   const modularityClips: ClipItem[] = [
@@ -112,6 +114,10 @@
       selectedClips.add(clipLabel);
     }
     selectedClips = selectedClips;
+
+    // Update the store
+    searchStoreValue.selectedClips = selectedClips;
+    searchStore.set(searchStoreValue);
   };
 
   onMount(() => {
@@ -127,9 +133,16 @@
     if (component) {
       mySearchPanel = new SearchPanel(component, searchPanelUpdated);
     }
+
+    searchStore.subscribe(value => {
+      searchStoreValue = value;
+    });
+
+    searchStoreValue.selectedClips = selectedClips;
+    searchStore.set(searchStoreValue);
   };
 
-  $: mounted && !initialized && component && initView();
+  $: mounted && !initialized && component && searchStore && initView();
 </script>
 
 <style lang="scss">

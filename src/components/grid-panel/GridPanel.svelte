@@ -1,9 +1,12 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import type { Writable } from 'svelte/store';
   import { GridPanel } from './GridPanel';
   import { config } from '../../config/config';
   import type { ClipLabel } from '../../types/common-types';
   import type { SuperNovaEntry } from '../../types/common-types';
+  import type { SearchStoreValue } from '../../stores';
+  import { getSearchStoreDefaultValue } from '../../stores';
   import d3 from '../../utils/d3-import';
   import iconCancel from '../../imgs/icon-cancel.svg?raw';
   import iconFile from '../../imgs/icon-file.svg?raw';
@@ -15,6 +18,8 @@
     label: ClipLabel;
     name: string;
   }
+
+  export let searchStore: Writable<SearchStoreValue>;
 
   // Components
   let component: HTMLElement | null = null;
@@ -48,8 +53,8 @@
     { label: 'runtime', name: 'Run-time data' },
     { label: 'code', name: 'Code and text' },
     { label: 'external', name: 'External Data' },
-    { label: 'demand', name: 'In-cell' },
-    { label: 'always', name: 'Out-of-cell' },
+    { label: 'on-demand', name: 'In-cell' },
+    { label: 'always-on', name: 'Out-of-cell' },
     { label: 'mono', name: 'Monolithic' },
     { label: 'modular', name: 'Modular' },
     { label: 'data scientist', name: 'Data Scientist' },
@@ -87,11 +92,9 @@
       myGridPanel = new GridPanel(
         component,
         gridPanelUpdated,
-        supernovaEntries
+        supernovaEntries,
+        searchStore
       );
-
-      showingEntry = supernovaEntries[5];
-      dialogElement?.showModal();
     }
   };
 

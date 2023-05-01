@@ -3,8 +3,10 @@
   import SearchPanel from '../search-panel/SearchPanel.svelte';
   import GridPanel from '../grid-panel/GridPanel.svelte';
   import iconGithub from '../../imgs/icon-github.svg?raw';
+  import { getSearchStore } from '../../stores';
 
   let component: HTMLElement | null = null;
+  const searchStore = getSearchStore();
 </script>
 
 <style lang="scss">
@@ -28,11 +30,11 @@
     </div>
 
     <div class="search-container">
-      <SearchPanel />
+      <SearchPanel searchStore="{searchStore}" />
     </div>
 
     <div class="card-container">
-      <GridPanel />
+      <GridPanel searchStore="{searchStore}" />
     </div>
   </div>
 </div>

@@ -180,6 +180,22 @@ export const setsAreEqual = <T>(set1: Set<T>, set2: Set<T>): boolean => {
 };
 
 /**
+ * Get the intersect of two sets
+ * @param set1 Set 1
+ * @param set2 Set 2
+ * @returns Intersect
+ */
+export const setIntersect = <T>(set1: Set<T>, set2: Set<T>): Set<T> => {
+  const intersect = new Set<T>();
+  for (const item of set1) {
+    if (set2.has(item)) {
+      intersect.add(item);
+    }
+  }
+  return intersect;
+};
+
+/**
  * Get the file name and file extension from a File object
  * @param {File} file File object
  * @returns [file name, file extension]
