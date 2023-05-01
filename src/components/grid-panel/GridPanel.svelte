@@ -35,7 +35,11 @@
     initialized = true;
 
     if (component) {
-      myGridPanel = new GridPanel(component, gridPanelUpdated);
+      myGridPanel = new GridPanel(
+        component,
+        gridPanelUpdated,
+        supernovaEntries
+      );
     }
   };
 
@@ -50,7 +54,9 @@
   <div class="content-wrapper">
     <div class="row-header">
       <span class="label"
-        >Showing 55 / 150 visual analytics tools, sorted by
+        >{`Showing ${myGridPanel ? myGridPanel.curEntries.length : 0} / ${
+          supernovaEntries.length
+        } visual analytics tools, sorted by`}
       </span>
       <span class="label">
         <div class="select" id="hidden-select">
@@ -59,9 +65,12 @@
           </select>
         </div>
         <div class="select">
-          <select id="sort-select">
-            <option value="star-">star counts (↓)</option>
-            <option value="star+">star counts (↑)</option>
+          <select
+            id="sort-select"
+            on:change="{e => myGridPanel?.sortSelectChanged(e)}"
+          >
+            <!-- <option value="star-">star counts (↓)</option>
+            <option value="star+">star counts (↑)</option> -->
             <option value="date-">release dates (↓)</option>
             <option value="date+">release dates (↑)</option>
             <option value="name+">name (A-Z)</option>
@@ -72,21 +81,23 @@
     </div>
 
     <div class="card-panel">
-      {#each supernovaEntries as entry}
-        <div class="card">
-          <img
-            class="thumbnail"
-            src="{`${import.meta.env.BASE_URL}images/thumbnails/${
-              entry.name
-            }.webp`}"
-            alt="{`Thumbnail of ${entry.name}`}"
-          />
+      {#if myGridPanel !== null}
+        {#each myGridPanel.curEntries as entry}
+          <div class="card">
+            <img
+              class="thumbnail"
+              src="{`${import.meta.env.BASE_URL}images/thumbnails/${
+                entry.name
+              }.webp`}"
+              alt="{`Thumbnail of ${entry.name}`}"
+            />
 
-          <div class="name">
-            {entry.name}
+            <div class="name">
+              {entry.name}
+            </div>
           </div>
-        </div>
-      {/each}
+        {/each}
+      {/if}
     </div>
   </div>
 </div>

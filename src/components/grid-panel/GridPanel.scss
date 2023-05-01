@@ -10,6 +10,7 @@ $button-border-radius: 5px;
   width: 100%;
   overflow-y: auto;
   padding-bottom: $panel-h-padding;
+  background-color: hsl(0, 0%, 97%);
 }
 
 .svg-icon {
@@ -127,7 +128,7 @@ $button-border-radius: 5px;
   width: 100%;
   height: 100%;
   padding: $panel-h-padding $panel-h-padding;
-  background-color: $gray-50;
+  background-color: hsl(0, 0%, 97%);
 
   .card {
     width: 170px;

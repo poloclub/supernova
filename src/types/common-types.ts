@@ -4,11 +4,13 @@
 
 export interface SuperNovaEntry {
   name: string;
+  nameDisplay: string;
   githubURL: string;
   paperURL: string;
   otherURLs: string[];
   description: string;
   bibtex: string;
+  bibtexKey: string;
   sourceType: SourceString;
   releaseYear: number;
   communication: CommunicationString;
@@ -27,7 +29,12 @@ type layoutString = 'in-cell' | 'out-of-cell';
 type ModularityString = 'monolithic' | 'modular';
 type UserString = 'data-scientist' | 'scientist' | 'educator';
 type NotebookString = 'jupyter' | 'lab' | 'colab' | 'vscode';
-type ImplementationString = 'ipywidget' | 'lab-extension' | 'html' | 'nova';
+type ImplementationString =
+  | 'ipywidget'
+  | 'extension'
+  | 'html'
+  | 'nova'
+  | 'custom';
 
 export type ClipLabel =
   | CommunicationString

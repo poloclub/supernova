@@ -34,12 +34,13 @@
   }
 
   .app-tagline {
-    font-size: $font-u1;
+    font-size: $font-u2;
   }
 }
 
 .right-content {
   display: flex;
+  font-size: $font-u2;
   gap: 16px;
 
   a {
