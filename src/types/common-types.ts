@@ -35,6 +35,7 @@ type ImplementationString =
   | 'extension'
   | 'html'
   | 'nova'
+  | 'other-package'
   | 'custom';
 
 export type ClipLabel =

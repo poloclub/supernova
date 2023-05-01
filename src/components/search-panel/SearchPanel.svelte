@@ -52,6 +52,8 @@
     'vscode',
     'ipywidget',
     'extension',
+    'other-package',
+    'custom',
     'html',
     'nova'
   ];
@@ -120,6 +122,17 @@
     searchStore.set(searchStoreValue);
   };
 
+  const inputChanged = e => {
+    const value = (e.target as HTMLInputElement).value;
+    searchStoreValue.keyword = value.toLowerCase();
+    searchStore.set(searchStoreValue);
+  };
+
+  const cancelSearch = () => {
+    searchStoreValue.keyword = '';
+    searchStore.set(searchStoreValue);
+  };
+
   onMount(() => {
     mounted = true;
   });
@@ -164,7 +177,7 @@
       on:blur="{() => {
         inputFocused = false;
       }}"
-      on:input="{e => mySearchPanel?.inputChanged(e)}"
+      on:input="{e => inputChanged(e)}"
     />
 
     <div class="end-button">
@@ -180,7 +193,7 @@
         class:hidden="{searchInputValue.length === 0}"
         on:click="{() => {
           searchInputValue = '';
-          mySearchPanel?.cancelSearch();
+          cancelSearch();
         }}"
       >
         {@html iconCancel}
