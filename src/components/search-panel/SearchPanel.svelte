@@ -31,17 +31,17 @@
 
   // Select all clips by default
   const allClipLabels: ClipLabel[] = [
-    'no-comm',
+    'no',
     'one-way',
     'two-way',
-    'runtime-data',
-    'code-text',
-    'external-data',
-    'in-cell',
-    'out-of-cell',
-    'monolithic',
+    'runtime',
+    'code',
+    'external',
+    'demand',
+    'always',
+    'mono',
     'modular',
-    'data-scientist',
+    'data scientist',
     'scientist',
     'educator',
     'jupyter',
@@ -49,36 +49,36 @@
     'colab',
     'vscode',
     'ipywidget',
-    'lab-extension',
+    'extension',
     'html',
     'nova'
   ];
   let selectedClips = new Set<ClipLabel>(allClipLabels);
 
   const commClips: ClipItem[] = [
-    { label: 'no-comm', name: 'No communication' },
+    { label: 'no', name: 'No communication' },
     { label: 'one-way', name: 'One-way' },
     { label: 'two-way', name: 'Two-way' }
   ];
 
   const materialClips: ClipItem[] = [
-    { label: 'runtime-data', name: 'Run-time data' },
-    { label: 'code-text', name: 'Code and text' },
-    { label: 'external-data', name: 'External Data' }
+    { label: 'runtime', name: 'Run-time data' },
+    { label: 'code', name: 'Code and text' },
+    { label: 'external', name: 'External Data' }
   ];
 
   const layoutClips: ClipItem[] = [
-    { label: 'in-cell', name: 'In-cell' },
-    { label: 'out-of-cell', name: 'Out-of-cell' }
+    { label: 'demand', name: 'In-cell' },
+    { label: 'always', name: 'Out-of-cell' }
   ];
 
   const modularityClips: ClipItem[] = [
-    { label: 'monolithic', name: 'Monolithic' },
+    { label: 'mono', name: 'Monolithic' },
     { label: 'modular', name: 'Modular' }
   ];
 
   const userClips: ClipItem[] = [
-    { label: 'data-scientist', name: 'Data Scientist' },
+    { label: 'data scientist', name: 'Data Scientist' },
     { label: 'scientist', name: 'Scientist' },
     { label: 'educator', name: 'Educators and Students' }
   ];
@@ -92,7 +92,7 @@
 
   const implementationClips: ClipItem[] = [
     { label: 'ipywidget', name: 'ipywidget' },
-    { label: 'lab-extension', name: 'Lab extension' },
+    { label: 'extension', name: 'Lab extension' },
     { label: 'html', name: 'HTML display' },
     { label: 'nova', name: 'NOVA' }
   ];

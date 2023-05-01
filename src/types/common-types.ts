@@ -20,14 +20,15 @@ export interface SuperNovaEntry {
   modularity: ModularityString;
   user: UserString;
   implementation: ImplementationString;
+  allClips: Set<ClipLabel>;
 }
 
 type SourceString = 'paper' | 'package';
-type CommunicationString = 'no-comm' | 'one-way' | 'two-way';
-type MaterialString = 'runtime-data' | 'code-text' | 'external-data';
-type layoutString = 'in-cell' | 'out-of-cell';
-type ModularityString = 'monolithic' | 'modular';
-type UserString = 'data-scientist' | 'scientist' | 'educator';
+type CommunicationString = 'no' | 'one-way' | 'two-way';
+type MaterialString = 'runtime' | 'code' | 'external';
+type layoutString = 'demand' | 'always';
+type ModularityString = 'mono' | 'modular';
+type UserString = 'data scientist' | 'scientist' | 'educator';
 type NotebookString = 'jupyter' | 'lab' | 'colab' | 'vscode';
 type ImplementationString =
   | 'ipywidget'
