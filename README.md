@@ -8,7 +8,7 @@ Design Strategies and Opportunities for Interactive Visualization in Computation
 
 <table>
   <tr>
-    <td colspan="1"><a href="https://poloclub.github.io/supernova"><img src='https://i.imgur.com/rrV075I.png'></a></td>
+    <td colspan="1"><a href="https://poloclub.github.io/supernova"><img src='https://i.imgur.com/osA5hH3.png'></a></td>
   </tr>
   <tr></tr>
   <tr align="center">
