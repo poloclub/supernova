@@ -1,14 +1,24 @@
-# SuperNOVA
+# SuperNOVA <a href="https://poloclub.github.io/supernova/"><img align="right" src="public/favicon.svg" width="32" height="32"></img></a>
 
-[![license](https://img.shields.io/badge/License-MIT-brightgreen)](https://github.com/poloclub/supernova/blob/master/LICENSE)
 
-TODO: Add image
+[![Github Actions Status](https://github.com/poloclub/supernova/workflows/build/badge.svg)](https://github.com/poloclub/supernova/actions/workflows/build.yml)
+[![license](https://img.shields.io/badge/License-MIT-success)](https://github.com/poloclub/supernova/blob/master/LICENSE)
 
 Design Strategies and Opportunities for Interactive Visualization in Computational Notebooks
 
-<!--|<img src='https://i.imgur.com/tlkVvjt.png'>|-->
-<!-- |:---:| -->
-|<a href="">"SuperNOVA: Design Strategies and Opportunities for Interactive Visualization in Computational Notebooks"</a>|
+<table>
+  <tr>
+    <td colspan="1"><a href="https://poloclub.github.io/supernova"><img src='https://i.imgur.com/rrV075I.png'></a></td>
+  </tr>
+  <tr></tr>
+  <tr align="center">
+    <td><a href="https://poloclub.github.io/supernova">🚀 Live Demo: Explore 159 notebook visual analytics tools in your browser!</a></td>
+    <!-- <td><a href="https://youtu.be/3eGqTmsStJM">📺 Demo Video</a></td>
+    <td><a href="https://youtu.be/l1mr9z1TuAk">👨🏻‍🏫 Conference Talk</a></td>
+    <td><a href="https://arxiv.org/abs/2209.09227">📖 Research Paper</a></td> -->
+  </tr>
+</table>
+
 
 ## Overview
 
@@ -20,7 +30,7 @@ Computational notebooks such as Jupyter Notebook have become the de facto progra
 
 ## Live Demo
 
-For a live web demo of SuperNOVA, visit: <https://supernova-xiaohk.vercel.app/>
+For a live web demo of SuperNOVA, visit: <https://poloclub.github.io/supernova/>
 
 ## How to add an entry to SuperNOVA
 
@@ -67,11 +77,11 @@ Make sure you have the necessary information for the entry you want to add, incl
 
 SuperNOVA is created by <a href='https://zijie.wang/' target='_blank'>Jay Wang</a>, <a href='https://www.davidmunechika.com' target='_blank'>David Munechika</a>, <a href='http://www.seongmin.xyz' target='_blank'>Seongmin Lee</a>, and <a href='' target='_blank'>Polo Chau</a>.
 
-## Citation
+<!-- ## Citation
 
 ```bibTeX
 
-```
+``` -->
 
 ## License
 
