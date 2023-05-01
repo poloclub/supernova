@@ -168,6 +168,9 @@ $button-border-radius: 5px;
       font-size: $font-d1;
       background-color: white;
       text-align: center;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
   }
 }
