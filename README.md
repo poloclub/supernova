@@ -26,7 +26,7 @@ SuperNOVA is an interactive browser to help researchers explore existing noteboo
 
 ## SuperNOVA Details
 
-Computational notebooks such as Jupyter Notebook have become the de facto programming environment among data scientists. Many visualization researchers and practitioners have developed interactive visualization tools that support notebooks. However, little is known about the appropriate design of visual analytics (VA) tools in notebooks. To bridge this critical research gap, we investigate the design strategies in this space by analyzing 148 notebook VA tools and their users' feedback. SuperNOVA is an interactive browsers to help researchers explore the landscape of notebook VA tools and search for related work.
+Computational notebooks such as Jupyter Notebook have become data scientists' de facto programming environments. Many visualization researchers and practitioners have developed interactive visualization tools that support notebooks. However, little is known about the appropriate design of visual analytics (VA) tools in notebooks. To bridge this critical research gap, we investigate the design strategies in this space by analyzing 148 notebook VA tools and their users' feedback. SuperNOVA is an interactive browsers to help researchers explore the landscape of notebook VA tools and search for related work.
 
 ## Live Demo
 
@@ -72,6 +72,10 @@ Make sure you have the necessary information for the entry you want to add, incl
   - If the VA tool is compatible with a specific notebook platform, list the platform in the `supportedNotebooks` field (e.g. Jupyter, Colab, etc.).
 
 4. Save the file and make a pull request to the repository.
+
+## Data Collection
+
+Code for data collection and cleaned GitHub issues are at [`./metadata`](./metadata).
 
 ## Credits
 
