@@ -78,6 +78,11 @@
 
   onMount(() => {
     mounted = true;
+
+    // Update the header
+    const headerTagline = document.querySelector('.app-tagline');
+    headerTagline.textContent = `A Collection of ${supernovaEntries.length} Interactive Visualization Tools for Computational
+        Notebooks`;
   });
 
   /**

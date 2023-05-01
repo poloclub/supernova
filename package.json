@@ -7,8 +7,10 @@
     "dev": "vite --port 3000",
     "build": "vite build",
     "preview": "vite preview",
+    "build:github": "vite build --mode github",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "deploy:vercel": "sh ./publish-vercel.sh"
+    "deploy:vercel": "sh ./publish-vercel.sh",
+    "deploy:github": "pnpm run build:github && pnpm gh-pages -m \"Deploy $(git log '--format=format:%H' main -1)\" -d ./gh-page"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.1.0",
@@ -75,6 +77,7 @@
     "eslint-plugin-svelte": "^2.26.0",
     "eslint-plugin-svelte3": "^3.4.1",
     "flexsearch": "^0.7.31",
+    "gh-pages": "^5.0.0",
     "prettier": "^2.8.8",
     "rollup": "^2.79.1",
     "rollup-plugin-css-only": "^3.1.0",
