@@ -41,7 +41,7 @@
     'external',
     'on-demand',
     'always-on',
-    'mono',
+    'monolithic',
     'modular',
     'data scientist',
     'scientist',
@@ -77,7 +77,7 @@
   ];
 
   const modularityClips: ClipItem[] = [
-    { label: 'mono', name: 'Monolithic' },
+    { label: 'monolithic', name: 'Monolithic' },
     { label: 'modular', name: 'Modular' }
   ];
 
@@ -98,7 +98,9 @@
     { label: 'ipywidget', name: 'ipywidget' },
     { label: 'extension', name: 'Lab extension' },
     { label: 'html', name: 'HTML display' },
-    { label: 'nova', name: 'NOVA' }
+    { label: 'nova', name: 'NOVA' },
+    { label: 'other-package', name: 'Other Package' },
+    { label: 'custom', name: 'Custom' }
   ];
 
   const searchPanelUpdated = () => {

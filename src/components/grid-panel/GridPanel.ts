@@ -38,6 +38,9 @@ export class GridPanel {
     // Check the selected clips
     this.curEntries = [];
 
+    console.log(this.allEntries);
+    console.log(this.searchStoreValue.selectedClips);
+
     for (const entry of this.allEntries) {
       let addCurEntry = true;
 

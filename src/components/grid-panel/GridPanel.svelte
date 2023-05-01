@@ -38,6 +38,7 @@
     entry.materials.forEach(d => curClips.push(d));
     entry.layouts.forEach(d => curClips.push(d));
     entry.supportedNotebooks.forEach(d => curClips.push(d));
+    curClips.push(entry.modularity);
     curClips.push(entry.implementation);
     return new Set(curClips);
   };
@@ -55,7 +56,7 @@
     { label: 'external', name: 'External Data' },
     { label: 'on-demand', name: 'In-cell' },
     { label: 'always-on', name: 'Out-of-cell' },
-    { label: 'mono', name: 'Monolithic' },
+    { label: 'monolithic', name: 'Monolithic' },
     { label: 'modular', name: 'Modular' },
     { label: 'data scientist', name: 'Data Scientist' },
     { label: 'scientist', name: 'Scientist' },
@@ -74,6 +75,12 @@
 
   const gridPanelUpdated = () => {
     myGridPanel = myGridPanel;
+  };
+
+  const dialogClicked = (e: MouseEvent) => {
+    if (e.target === dialogElement) {
+      dialogElement?.close();
+    }
   };
 
   onMount(() => {
@@ -109,7 +116,12 @@
 </style>
 
 <div class="grid-panel-wrapper" bind:this="{component}">
-  <dialog id="image-dialog" bind:this="{dialogElement}">
+  <dialog
+    id="image-dialog"
+    bind:this="{dialogElement}"
+    on:click="{e => dialogClicked(e)}"
+    on:keypress="{e => dialogClicked(e)}"
+  >
     {#if showingEntry !== null}
       <div class="header">
         <div class="left">
