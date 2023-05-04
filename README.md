@@ -1,4 +1,4 @@
-# SuperNOVA <a href="https://poloclub.github.io/supernova/"><img align="right" src="public/favicon.svg" width="30" height="30"></img></a>
+# SuperNOVA <a href="https://poloclub.github.io/supernova/"><img align="right" src="public/android-chrome-192x192.png" width="30" height="30"></img></a>
 
 
 [![Github Actions Status](https://github.com/poloclub/supernova/workflows/build/badge.svg)](https://github.com/poloclub/supernova/actions/workflows/build.yml)

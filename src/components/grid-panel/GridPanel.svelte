@@ -14,7 +14,7 @@
   import iconFile from '../../imgs/icon-file.svg?raw';
   import iconGithub from '../../imgs/icon-github-2.svg?raw';
   import iconLink from '../../imgs/icon-link-2.svg?raw';
-  import supernova from '../../../metadata/resources/supernova.yaml';
+  import supernova from '../../data/supernova.yaml';
 
   interface ClipItem {
     label: ClipLabel;
@@ -241,6 +241,7 @@
           >
           <span
             class="copy-text"
+            on:keypress="{() => copyText(showingEntry?.bibtex)}"
             on:click="{() => copyText(showingEntry?.bibtex)}"
             >[Copy BibTeX]</span
           >

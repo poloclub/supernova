@@ -141,15 +141,16 @@ $button-border-radius: 5px;
     align-items: center;
     cursor: pointer;
 
-    transition: box-shadow 100ms ease-in-out;
+    transition: transform 100ms ease-in-out, box-shadow 100ms ease-in-out;
 
     &:hover {
+      transform: scale(1.02);
       transform-origin: center;
       box-shadow: 0px 0px 8px hsla(0, 0%, 0%, 0.13);
     }
 
     &:active {
-      transform: translateY(1px);
+      transform: scale(1.02) translateY(1px);
     }
 
     .thumbnail-container {

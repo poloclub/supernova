@@ -2,8 +2,6 @@ from glob import glob
 from os.path import join
 from PIL import Image
 
-import os
-
 
 def resize_images():
     """
@@ -12,8 +10,13 @@ def resize_images():
     counter = 0
     for img_name in glob(join("../../public/images/thumbnails", "*")):
         img = Image.open(img_name)
-        if img.size[0] > 300 and img.size[1] > 300:
-            img.thumbnail([300, 300], Image.Resampling.LANCZOS)
+        target_length = 300
+
+        if img.size[1] / img.size[0] > 2 or img.size[1] / img.size[0] < 0.5:
+            target_length = 600
+
+        if img.size[0] > target_length or img.size[1] > target_length:
+            img.thumbnail([target_length, target_length], Image.Resampling.LANCZOS)
             img.save(img_name)
             counter += 1
 
