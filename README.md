@@ -94,8 +94,8 @@ Make sure you have the necessary information for the entry you want to add, incl
   # {'data scientist' | 'scientist' | 'educator'} The main targeted users
 ```
 
-3. Save a thumbnail image in the [`./public/images/thumbnails/`](./public/images/thumbnails/) directory. Please compress the image and make sure the file size is smaller than 100kb.
-4. Submit a pull request to the repository.
+1. Save a thumbnail image in the [`./public/images/thumbnails/`](./public/images/thumbnails/) directory. Please resize the image so that both width and height are smaller than `300px` and compress the image to be smaller than 20kb.
+2. Submit a pull request to the repository.
 
 ## Data Collection
 
