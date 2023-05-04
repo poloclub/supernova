@@ -1,5 +1,6 @@
 <script lang="ts">
   let component: HTMLElement | null = null;
+  import iconSupernova from '../../imgs/supernova-logo.svg?raw';
 </script>
 
 <style lang="scss">
@@ -9,7 +10,11 @@
 <div class="header-wrapper" bind:this="{component}">
   <div class="header-content">
     <div class="left-content">
-      <div class="app-title">SuperNOVA</div>
+      <div class="app-title">
+        <svg class="svg-icon">
+          {@html iconSupernova}
+        </svg>
+      </div>
       <div class="app-tagline">
         A Collection of 150 Interactive Visualization Tools for Computational
         Notebooks

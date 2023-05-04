@@ -130,7 +130,7 @@ $button-border-radius: 5px;
   background-color: hsl(0, 0%, 97%);
 
   .card {
-    width: 170px;
+    width: 165px;
     box-shadow: 0px 0px 6px hsla(0, 0%, 0%, 0.07);
     border: 1px solid hsla(0, 0%, 0%, 0.1);
     border-radius: 6px;
@@ -154,18 +154,30 @@ $button-border-radius: 5px;
       // box-shadow: 0px 0px 9px hsla(0, 0%, 0%, 0.18);
     }
 
-    .thumbnail {
+    .thumbnail-container {
       width: 100%;
       aspect-ratio: 1 / 1;
-      object-fit: cover;
-      object-position: center;
       border-bottom: 1px solid $gray-300;
+    }
+
+    .thumbnail {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top left;
+      transition: object-position 700ms linear;
+
+      &:hover {
+        object-position: bottom right;
+        transition: object-position 1400ms linear;
+      }
     }
 
     .name {
       width: 100%;
       padding: 0 5px;
       font-size: $font-d1;
+      font-weight: 600;
       background-color: white;
       text-align: center;
       white-space: nowrap;
@@ -218,7 +230,7 @@ dialog[open] {
 
     .left {
       display: flex;
-      gap: 8px;
+      gap: 7px;
       align-items: center;
 
       .svg-icon {

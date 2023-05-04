@@ -1,5 +1,22 @@
 @import '../../define.scss';
 
+.svg-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: currentColor;
+
+  pointer-events: fill;
+
+  :global(svg) {
+    fill: currentColor;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .header-wrapper {
   width: 100%;
   height: 100%;
@@ -31,10 +48,14 @@
     font-size: 1.625rem;
     font-variant: small-caps;
     font-weight: 600;
+    height: 28px;
+    width: 220px;
+    margin-top: 7px;
+    color: white;
   }
 
   .app-tagline {
-    font-size: $font-u2;
+    font-size: 21px;
   }
 }
 

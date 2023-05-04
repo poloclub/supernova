@@ -72,8 +72,8 @@
   ];
 
   const layoutClips: ClipItem[] = [
-    { label: 'on-demand', name: 'In-cell' },
-    { label: 'always-on', name: 'Out-of-cell' }
+    { label: 'on-demand', name: 'On-demand' },
+    { label: 'always-on', name: 'Always-on' }
   ];
 
   const modularityClips: ClipItem[] = [

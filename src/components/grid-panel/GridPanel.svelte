@@ -10,9 +10,9 @@
   import d3 from '../../utils/d3-import';
   import iconCancel from '../../imgs/icon-cancel.svg?raw';
   import iconFile from '../../imgs/icon-file.svg?raw';
-  import iconGithub from '../../imgs/icon-github.svg?raw';
-  import iconHome from '../../imgs/icon-home.svg?raw';
-  import supernova from '../../data/supernova.yaml';
+  import iconGithub from '../../imgs/icon-github-2.svg?raw';
+  import iconLink from '../../imgs/icon-link-2.svg?raw';
+  import supernova from '../../../metadata/resources/supernova.yaml';
 
   interface ClipItem {
     label: ClipLabel;
@@ -148,7 +148,7 @@
           {#each showingEntry.otherURLs as url}
             <a href="{url}" target="_blank">
               <span class="svg-icon">
-                {@html iconHome}
+                {@html iconLink}
               </span>
             </a>
           {/each}
@@ -230,16 +230,18 @@
               dialogElement?.showModal();
             }}"
           >
-            <img
-              class="thumbnail"
-              src="{`${import.meta.env.BASE_URL}images/thumbnails/${
-                entry.name
-              }.webp`}"
-              alt="{`Thumbnail of ${entry.name}`}"
-            />
+            <div class="thumbnail-container">
+              <img
+                class="thumbnail"
+                src="{`${import.meta.env.BASE_URL}images/thumbnails/${
+                  entry.name
+                }.webp`}"
+                alt="{`Thumbnail of ${entry.name}`}"
+              />
+            </div>
 
             <div class="name">
-              {entry.name}
+              {entry.nameDisplay}
             </div>
           </div>
         {/each}
