@@ -371,4 +371,29 @@ dialog[open] {
       border-radius: 5px;
     }
   }
+
+  .bibtex-bar {
+    width: 100%;
+    display: flex;
+    padding: 0px 20px 0 20px;
+    font-size: $font-d2;
+    flex-wrap: wrap;
+  }
+
+  .bibtex-short {
+    .copy-text {
+      color: $teal-900;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:active {
+        color: $teal-700;
+      }
+    }
+  }
 }

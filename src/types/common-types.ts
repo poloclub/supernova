@@ -11,6 +11,7 @@ export interface SuperNovaEntry {
   description: string;
   bibtex: string;
   bibtexKey: string;
+  bibtexJson: { [key: string]: string };
   sourceType: SourceString;
   releaseYear: number;
   communication: CommunicationString;

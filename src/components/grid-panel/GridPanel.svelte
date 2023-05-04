@@ -8,6 +8,8 @@
   import type { SearchStoreValue } from '../../stores';
   import { getSearchStoreDefaultValue } from '../../stores';
   import d3 from '../../utils/d3-import';
+  import bibtexParse from '@orcid/bibtex-parse-js';
+
   import iconCancel from '../../imgs/icon-cancel.svg?raw';
   import iconFile from '../../imgs/icon-file.svg?raw';
   import iconGithub from '../../imgs/icon-github-2.svg?raw';
@@ -43,8 +45,40 @@
     return new Set(curClips);
   };
 
+  const getBibtexJson = (entry: SuperNovaEntry) => {
+    return bibtexParse.toJSON(entry.bibtex)[0] as { [key: string]: string };
+  };
+
+  const cleanBibtexString = (bibtexString: string) => {
+    let result = bibtexString.replaceAll('{', '');
+    result = result.replaceAll('}', '');
+    return result;
+  };
+
+  const cleanBibtexAuthorString = (authorString: string) => {
+    const authors = authorString.split('and');
+    let newAuthorString = '';
+    for (const [i, author] of authors.entries()) {
+      const cleanedAuthor = cleanBibtexString(author);
+      const parts = cleanedAuthor.split(', ');
+      if (parts.length == 2) {
+        newAuthorString += parts[1].replaceAll(' ', ' ');
+        newAuthorString += ' ';
+        newAuthorString += parts[0].replaceAll(' ', ' ');
+      } else {
+        newAuthorString += cleanedAuthor;
+      }
+
+      if (i !== authors.length - 1) {
+        newAuthorString += ', ';
+      }
+    }
+    return newAuthorString;
+  };
+
   for (const entry of supernovaEntries) {
     entry.allClips = getAllClips(entry);
+    entry.bibtexJson = getBibtexJson(entry);
   }
 
   const allClipItems: ClipItem[] = [
@@ -88,8 +122,14 @@
 
     // Update the header
     const headerTagline = document.querySelector('.app-tagline');
-    headerTagline.textContent = `A Collection of ${supernovaEntries.length} Interactive Visualization Tools for Computational
-        Notebooks`;
+    headerTagline.textContent =
+      `A Collection of ${supernovaEntries.length} ` +
+      'Interactive Visualization Tools for Computational Notebooks';
+
+    console.log(supernovaEntries);
+
+    showingEntry = supernovaEntries[5];
+    dialogElement?.showModal();
   });
 
   /**
@@ -187,6 +227,21 @@
             <div class="clip">{clipItem.name}</div>
           {/if}
         {/each}
+      </div>
+
+      <div class="bibtex-bar">
+        <span class="bibtex-short"
+          >{cleanBibtexAuthorString(
+            showingEntry?.bibtexJson['entryTags']['author']
+          )},
+          {cleanBibtexString(showingEntry?.bibtexJson['entryTags']['year'])},
+          <em
+            >"{cleanBibtexString(
+              showingEntry?.bibtexJson['entryTags']['title']
+            )}"</em
+          >
+          <span class="copy-text">[Copy BibTeX]</span>
+        </span>
       </div>
     {/if}
   </dialog>

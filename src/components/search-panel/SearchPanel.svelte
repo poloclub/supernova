@@ -10,7 +10,6 @@
   import iconTop from '../../imgs/icon-top.svg?raw';
   import iconCancel from '../../imgs/icon-cancel.svg?raw';
   import iconSearch from '../../imgs/icon-search.svg?raw';
-  import iconWizmap from '../../imgs/icon-wizmap.svg?raw';
 
   interface ClipItem {
     label: ClipLabel;

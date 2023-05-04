@@ -13,6 +13,7 @@
     "deploy:github": "pnpm run build:github && pnpm gh-pages -m \"Deploy $(git log '--format=format:%H' main -1)\" -d ./gh-page"
   },
   "devDependencies": {
+    "@orcid/bibtex-parse-js": "^0.0.25",
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-node-resolve": "^11.2.1",
     "@rollup/plugin-terser": "^0.4.1",
