@@ -76,6 +76,10 @@
     return newAuthorString;
   };
 
+  const copyText = (text: string) => {
+    navigator.clipboard.writeText(text);
+  };
+
   for (const entry of supernovaEntries) {
     entry.allClips = getAllClips(entry);
     entry.bibtexJson = getBibtexJson(entry);
@@ -125,11 +129,6 @@
     headerTagline.textContent =
       `A Collection of ${supernovaEntries.length} ` +
       'Interactive Visualization Tools for Computational Notebooks';
-
-    console.log(supernovaEntries);
-
-    showingEntry = supernovaEntries[5];
-    dialogElement?.showModal();
   });
 
   /**
@@ -240,7 +239,11 @@
               showingEntry?.bibtexJson['entryTags']['title']
             )}"</em
           >
-          <span class="copy-text">[Copy BibTeX]</span>
+          <span
+            class="copy-text"
+            on:click="{() => copyText(showingEntry?.bibtex)}"
+            >[Copy BibTeX]</span
+          >
         </span>
       </div>
     {/if}
