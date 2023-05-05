@@ -85,7 +85,7 @@
     copiedIcon?.classList.add('shown');
     setTimeout(() => {
       copiedIcon?.classList.remove('shown');
-    }, 2000);
+    }, 1500);
   };
 
   for (const entry of supernovaEntries) {
