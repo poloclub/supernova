@@ -25,9 +25,7 @@
       <a class="right-button" href="https://github.com/poloclub/supernova"
         >Code</a
       >
-      <a class="right-button" href="https://github.com/poloclub/supernova"
-        >Paper</a
-      >
+      <a class="right-button" href="http://arxiv.org/abs/2305.03039">Paper</a>
       <a
         class="right-button"
         href="https://github.com/poloclub/supernova#how-to-add-an-entry-to-supernova"

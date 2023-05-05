@@ -2,20 +2,21 @@
 
 
 [![Github Actions Status](https://github.com/poloclub/supernova/workflows/build/badge.svg)](https://github.com/poloclub/supernova/actions/workflows/build.yml)
-[![license](https://img.shields.io/badge/License-MIT-success)](https://github.com/poloclub/supernova/blob/master/LICENSE)
+[![license](https://img.shields.io/badge/License-MIT-blue)](https://github.com/poloclub/supernova/blob/master/LICENSE)
+[![arxiv badge](https://img.shields.io/badge/arXiv-2305.03039-red)](http://arxiv.org/abs/2305.03039)
 
 Design Strategies and Opportunities for Interactive Visualization in Computational Notebooks
 
 <table>
   <tr>
-    <td colspan="1"><a href="https://poloclub.github.io/supernova"><img src='https://i.imgur.com/wy2NbdR.png'></a></td>
+    <td colspan="2"><a href="https://poloclub.github.io/supernova"><img src='https://i.imgur.com/wy2NbdR.png'></a></td>
   </tr>
   <tr></tr>
   <tr align="center">
     <td><a href="https://poloclub.github.io/supernova">🚀 Live Demo: Explore 161 notebook visual analytics tools in your browser!</a></td>
     <!-- <td><a href="https://youtu.be/3eGqTmsStJM">📺 Demo Video</a></td>
-    <td><a href="https://youtu.be/l1mr9z1TuAk">👨🏻‍🏫 Conference Talk</a></td>
-    <td><a href="https://arxiv.org/abs/2209.09227">📖 Research Paper</a></td> -->
+    <td><a href="https://youtu.be/l1mr9z1TuAk">👨🏻‍🏫 Conference Talk</a></td> -->
+    <td><a href="https://arxiv.org/abs/2305.03039">📖 Research Paper</a></td>
   </tr>
 </table>
 
@@ -105,11 +106,20 @@ Code for data collection and cleaned GitHub issues are at [`./metadata`](./metad
 
 SuperNOVA is created by <a href='https://zijie.wang/' target='_blank'>Jay Wang</a>, <a href='https://www.davidmunechika.com' target='_blank'>David Munechika</a>, <a href='http://www.seongmin.xyz' target='_blank'>Seongmin Lee</a>, and <a href='' target='_blank'>Polo Chau</a>.
 
-<!-- ## Citation
+## Citation
 
 ```bibTeX
-
-``` -->
+@article{wangSuperNOVADesignStrategies2023,
+  title = {{{SuperNOVA}}: {{Design Strategies}} and {{Opportunities}} for {{Interactive Visualization}} in {{Computational Notebooks}}},
+  shorttitle = {{{SuperNOVA}}},
+  author = {Wang, Zijie J. and Munechika, David and Lee, Seongmin and Chau, Duen Horng},
+  year = {2023},
+  url = {http://arxiv.org/abs/2305.03039},
+  urldate = {2023-05-05},
+  archiveprefix = {arxiv},
+  journal = {arXiv 2305.03039}
+}
+```
 
 ## License
 

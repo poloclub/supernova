@@ -395,5 +395,17 @@ dialog[open] {
         color: $teal-700;
       }
     }
+
+    .svg-icon.copied-icon {
+      display: inline-block;
+      vertical-align: text-top;
+      color: $teal-600;
+      opacity: 0;
+      transition: opacity 500ms;
+
+      &:global(.shown) {
+        opacity: 1;
+      }
+    }
   }
 }

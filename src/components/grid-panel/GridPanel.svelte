@@ -14,6 +14,7 @@
   import iconFile from '../../imgs/icon-file.svg?raw';
   import iconGithub from '../../imgs/icon-github-2.svg?raw';
   import iconLink from '../../imgs/icon-link-2.svg?raw';
+  import iconCheck from '../../imgs/icon-check.svg?raw';
   import supernova from '../../data/supernova.yaml';
 
   interface ClipItem {
@@ -30,6 +31,7 @@
   let myGridPanel: GridPanel | null = null;
   let dialogElement: HTMLDialogElement | null = null;
   let showingEntry: SuperNovaEntry | null = null;
+  let copiedIcon: HTMLElement | null = null;
 
   const supernovaEntries = supernova as SuperNovaEntry[];
 
@@ -50,13 +52,15 @@
   };
 
   const cleanBibtexString = (bibtexString: string) => {
-    let result = bibtexString.replaceAll('{', '');
-    result = result.replaceAll('}', '');
-    return result;
+    return bibtexString
+      .replace(/[\t\n ]+/g, ' ')
+      .replace(/{\\["^`.'acu~Hvs]( )?([a-zA-Z])}/g, (full, x, char) => char)
+      .replace(/{\\([a-zA-Z])}/g, (full, char) => char)
+      .replace(/[{}]/gi, '');
   };
 
   const cleanBibtexAuthorString = (authorString: string) => {
-    const authors = authorString.split('and');
+    const authors = authorString.split(' and ');
     let newAuthorString = '';
     for (const [i, author] of authors.entries()) {
       const cleanedAuthor = cleanBibtexString(author);
@@ -78,6 +82,10 @@
 
   const copyText = (text: string) => {
     navigator.clipboard.writeText(text);
+    copiedIcon?.classList.add('shown');
+    setTimeout(() => {
+      copiedIcon?.classList.remove('shown');
+    }, 2000);
   };
 
   for (const entry of supernovaEntries) {
@@ -245,6 +253,9 @@
             on:click="{() => copyText(showingEntry?.bibtex)}"
             >[Copy BibTeX]</span
           >
+          <span class="copied-icon svg-icon" bind:this="{copiedIcon}">
+            {@html iconCheck}
+          </span>
         </span>
       </div>
     {/if}
