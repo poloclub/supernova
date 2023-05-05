@@ -34,9 +34,9 @@ For a live web demo of SuperNOVA, visit: <https://poloclub.github.io/supernova/>
 
 ## How to add an entry to SuperNOVA
 
-To add a new notebook VA tool into the SuperNOVA collection, please submit a [pull request](https://github.com/poloclub/supernova/pulls). You can add your VA tool to the [YAML file](https://github.com/poloclub/supernova/blob/main/src/data/supernova.yaml) with the following steps:
+To add a new notebook VA tool to the SuperNOVA collection, please submit a [pull request](https://github.com/poloclub/supernova/pulls). You can add your VA tool to the [YAML file](https://github.com/poloclub/supernova/blob/main/src/data/supernova.yaml) with the following steps:
 
-Make sure you have the necessary information for the entry you want to add, including the tool's title, authors, publication or release year, [conference name], DOI or URL, and a brief description of the paper's content.
+Make sure you have the necessary information for the entry you want to add, including the tool's title, authors, publication or release year, DOI or URL, and a brief description of the paper's content.
 
 1. Open the [YAML file](https://github.com/poloclub/supernova/blob/main/src/data/supernova.yaml) where the existing entries are stored.
 2. Use the following YAML template, and paste it below the last entry. For the definition details of each entry, please check out the SuperNOVA paper.
