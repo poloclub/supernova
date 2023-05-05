@@ -30,7 +30,7 @@ Computational notebooks such as Jupyter Notebook have become data scientists' de
 
 ## Live Demo
 
-For a live web demo of SuperNOVA, visit: <https://poloclub.github.io/supernova/>
+For a live web demo of SuperNOVA, visit: <https://poloclub.github.io/supernova/>.
 
 ## How to add an entry to SuperNOVA
 
@@ -96,7 +96,7 @@ Make sure you have the necessary information for the entry you want to add, incl
 ```
 
 3. Save a thumbnail image in the [`./public/images/thumbnails/`](./public/images/thumbnails/) directory. Please resize the image so that both width and height are smaller than 300px and compress the image to be smaller than 20kb.
-4. Submit a pull request to the repository.
+4. Submit a [pull request](https://github.com/poloclub/supernova/pulls) to this repository.
 
 ## Data Collection
 
