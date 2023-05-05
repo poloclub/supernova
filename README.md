@@ -95,8 +95,8 @@ Make sure you have the necessary information for the entry you want to add, incl
   user: ''
 ```
 
-1. Save a thumbnail image in the [`./public/images/thumbnails/`](./public/images/thumbnails/) directory. Please resize the image so that both width and height are smaller than `300px` and compress the image to be smaller than 20kb.
-2. Submit a pull request to the repository.
+3. Save a thumbnail image in the [`./public/images/thumbnails/`](./public/images/thumbnails/) directory. Please resize the image so that both width and height are smaller than 300px and compress the image to be smaller than 20kb.
+4. Submit a pull request to the repository.
 
 ## Data Collection
 
