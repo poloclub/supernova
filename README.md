@@ -12,13 +12,12 @@ Design Strategies and Opportunities for Interactive Visualization in Computation
   </tr>
   <tr></tr>
   <tr align="center">
-    <td><a href="https://poloclub.github.io/supernova">🚀 Live Demo: Explore 159 notebook visual analytics tools in your browser!</a></td>
+    <td><a href="https://poloclub.github.io/supernova">🚀 Live Demo: Explore 161 notebook visual analytics tools in your browser!</a></td>
     <!-- <td><a href="https://youtu.be/3eGqTmsStJM">📺 Demo Video</a></td>
     <td><a href="https://youtu.be/l1mr9z1TuAk">👨🏻‍🏫 Conference Talk</a></td>
     <td><a href="https://arxiv.org/abs/2209.09227">📖 Research Paper</a></td> -->
   </tr>
 </table>
-
 
 ## Overview
 
@@ -42,56 +41,57 @@ Make sure you have the necessary information for the entry you want to add, incl
 2. Use the following YAML template, and paste it below the last entry. For the definition details of each entry, please check out the SuperNOVA paper.
 
 ```yaml
-- bibtex: ''
+-
   # {string} The bibtex of this entry
+  bibtex: ''
 
-  bibtexKey: ''
   # {string} The bibtex key
+  bibtexKey: ''
 
-  communication: ''
   # {'no' | 'one-way' | 'two-way'} VA-notebook communication style
+  communication: ''
 
-  description: ''
   # {string} A description of the tool, can be the abstract of its paper
+  description: ''
 
-  githubURL: ''
   # {string?} GitHub repository URL
+  githubURL: ''
 
-  implementation: ''
   # {'ipywidget'| 'extension' | 'html' | 'nova' | 'other-package' | 'custom'} Implementation strategy
+  implementation: ''
 
-  layouts: ''
   # {'on-demand' | 'always-on'} The display style of the VA tool
+  layouts: ''
 
-  materials: ['']
   # {['runtime' | 'code' | 'external']} Types of data this VA tool uses
+  materials: ['']
 
-  modularity: ''
   # {'monolithic' | 'modular'} The modularity of this VA tool
+  modularity: ''
 
-  name: ''
   # {string} Name of this tool in lowercase. It has to match the thumbnail file name.
+  name: ''
 
-  nameDisplay: ''
   # {string} The name of this tool
+  nameDisplay: ''
 
-  otherURLs: []
   # {string[]?} Other URLs of this tool
+  otherURLs: []
 
-  paperURL: ''
   # {string?} Paper URL
+  paperURL: ''
 
-  releaseYear: 2023
   # {number} The release/publication year
+  releaseYear: 2023
 
-  sourceType: ''
   # {'paper' | 'package'} If this tool has a related paper, use 'paper'.
+  sourceType: ''
 
-  supportedNotebooks: ['']
   # {['jupyter' | 'lab' | 'colab' | 'vscode']} List of supported notebook platforms
+  supportedNotebooks: ['']
 
-  user: ''
   # {'data scientist' | 'scientist' | 'educator'} The main targeted users
+  user: ''
 ```
 
 1. Save a thumbnail image in the [`./public/images/thumbnails/`](./public/images/thumbnails/) directory. Please resize the image so that both width and height are smaller than `300px` and compress the image to be smaller than 20kb.
