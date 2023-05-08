@@ -41,9 +41,46 @@
     curClips.push(entry.communication);
     entry.materials.forEach(d => curClips.push(d));
     entry.layouts.forEach(d => curClips.push(d));
-    entry.supportedNotebooks.forEach(d => curClips.push(d));
     curClips.push(entry.modularity);
     curClips.push(entry.implementation);
+
+    // Special case for the supportedNotebook clips
+    switch (entry.supportedNotebooks.length) {
+      case 1: {
+        curClips.push(entry.supportedNotebooks[0]);
+        break;
+      }
+
+      case 2: {
+        if (
+          entry.supportedNotebooks.includes('jupyter') &&
+          entry.supportedNotebooks.includes('lab')
+        ) {
+          curClips.push('jupyter+lab');
+        } else {
+          console.error(
+            'Unknown combination of supported notebooks',
+            entry.supportedNotebooks
+          );
+        }
+        break;
+      }
+
+      case 3: {
+        curClips.push('colab');
+        break;
+      }
+
+      default: {
+        console.error(
+          'More than 3 supported notebooks',
+          entry,
+          entry.supportedNotebooks
+        );
+        break;
+      }
+    }
+
     return new Set(curClips);
   };
 
@@ -107,10 +144,10 @@
     { label: 'data scientist', name: 'Data Scientist' },
     { label: 'scientist', name: 'Scientist' },
     { label: 'educator', name: 'Educators and Students' },
-    { label: 'jupyter', name: 'Jupyter Notebook' },
-    { label: 'lab', name: 'JupyterLab' },
-    { label: 'colab', name: 'Colab' },
-    { label: 'vscode', name: 'VSCode Notebook' },
+    { label: 'jupyter', name: 'Jupyter Notebook Only' },
+    { label: 'lab', name: 'JupyterLab Only' },
+    { label: 'jupyter+lab', name: 'Jupyter + JupyterLab' },
+    { label: 'colab', name: 'Jupyter + JupyterLab + Colab' },
     { label: 'ipywidget', name: 'ipywidget' },
     { label: 'extension', name: 'Lab extension' },
     { label: 'html', name: 'HTML display' },

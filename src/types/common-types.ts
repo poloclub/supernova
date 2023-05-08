@@ -30,7 +30,7 @@ type MaterialString = 'runtime' | 'code' | 'external';
 type layoutString = 'on-demand' | 'always-on';
 type ModularityString = 'monolithic' | 'modular';
 type UserString = 'data scientist' | 'scientist' | 'educator';
-type NotebookString = 'jupyter' | 'lab' | 'colab' | 'vscode';
+type NotebookString = 'jupyter' | 'lab' | 'colab' | 'jupyter+lab';
 type ImplementationString =
   | 'ipywidget'
   | 'extension'

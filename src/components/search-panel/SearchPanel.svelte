@@ -47,8 +47,8 @@
     'educator',
     'jupyter',
     'lab',
+    'jupyter+lab',
     'colab',
-    'vscode',
     'ipywidget',
     'extension',
     'other-package',
@@ -87,10 +87,10 @@
   ];
 
   const notebookClips: ClipItem[] = [
-    { label: 'jupyter', name: 'Jupyter Notebook' },
-    { label: 'lab', name: 'JupyterLab' },
-    { label: 'colab', name: 'Colab' },
-    { label: 'vscode', name: 'VSCode Notebook' }
+    { label: 'jupyter', name: 'Jupyter Notebook Only' },
+    { label: 'lab', name: 'JupyterLab Only' },
+    { label: 'jupyter+lab', name: 'Jupyter + JupyterLab' },
+    { label: 'colab', name: 'Jupyter + JupyterLab + Colab' }
   ];
 
   const implementationClips: ClipItem[] = [
