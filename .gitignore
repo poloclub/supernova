@@ -22,3 +22,4 @@ metadata/*.bib
 metadata/thumbnails
 metadata/resources
 metadata/github-issues
+metadata/stat*
