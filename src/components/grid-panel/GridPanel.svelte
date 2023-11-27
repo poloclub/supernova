@@ -258,8 +258,8 @@
           <img
             class="thumbnail"
             src="{`${import.meta.env.BASE_URL}images/thumbnails/${
-              showingEntry?.name
-            }.webp`}"
+              showingEntry?.thumbnail
+            }`}"
             alt="{`Thumbnail of ${showingEntry.name}`}"
           />
         </div>
@@ -341,8 +341,8 @@
               <img
                 class="thumbnail"
                 src="{`${import.meta.env.BASE_URL}images/thumbnails/${
-                  entry.name
-                }.webp`}"
+                  entry.thumbnail
+                }`}"
                 alt="{`Thumbnail of ${entry.name}`}"
               />
             </div>

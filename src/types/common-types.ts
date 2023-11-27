@@ -22,6 +22,7 @@ export interface SuperNovaEntry {
   user: UserString;
   implementation: ImplementationString;
   allClips: Set<ClipLabel>;
+  thumbnail: string;
 }
 
 type SourceString = 'paper' | 'package';
