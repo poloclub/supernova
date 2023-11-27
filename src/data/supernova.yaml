@@ -5245,3 +5245,31 @@
   - colab
   user: scientist
 
+- bibtex: "@article{lin2023inksight, \n \
+  \ title={Inksight: Leveraging sketch interaction for documenting chart findings in computational notebooks},\n \
+  \ author={Lin, Yanna and Li, Haotian and Yang, Leni and Wu, Aoyu and Qu, Huamin}, \n \
+  \ journal={IEEE Transactions on Visualization and Computer Graphics}, \n \
+  \ year={2023}, \n \
+  \ publisher={IEEE}\n \
+}\n"
+  bibtexKey: lin2023inksight
+  communication: one-way
+  description: "Computational notebooks have become increasingly popular for exploratory data analysis due to their ability to support data exploration and explanation within a single document. Effective documentation for explaining chart findings during the exploration process is essential as it helps recall and share data analysis. However, documenting chart findings remains a challenge due to its time-consuming and tedious nature. While existing automatic methods alleviate some of the burden on users, they often fail to cater to users' specific interests. In response to these limitations, we present InkSight, a mixed-initiative computational notebook plugin that generates finding documentation based on the user's intent. InkSight allows users to express their intent in specific data subsets through sketching atop visualizations intuitively. To facilitate this, we designed two types of sketches, i.e., open-path and closed-path sketch. Upon receiving a user's sketch, InkSight identifies the sketch type and corresponding selected data items. Subsequently, it filters data fact types based on the sketch and selected data items before employing existing automatic data fact recommendation algorithms to infer data facts. Using large language models (GPT-3.5), InkSight converts data facts into effective natural language documentation. Users can conveniently fine-tune the generated documentation within InkSight. A user study with 12 participants demonstrated the usability and effectiveness of InkSight in expressing user intent and facilitating chart finding documentation."
+  githubURL: 
+  implementation: other-package
+  layouts:
+  - on-demand
+  materials:
+  - code
+  modularity: modular
+  name: inksight
+  nameDisplay: InkSight
+  otherURLs: []
+  paperURL: https://ieeexplore.ieee.org/abstract/document/10296056/
+  releaseYear: 2023
+  sourceType: paper
+  supportedNotebooks:
+  - jupyter
+  - lab
+  user: data scientist
+
