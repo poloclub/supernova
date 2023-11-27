@@ -91,6 +91,9 @@ Make sure you have the necessary information for the entry you want to add, incl
   # {['jupyter' | 'lab' | 'colab' | 'vscode']} List of supported notebook platforms
   supportedNotebooks: ['']
 
+  # {string} The thumbnail file name
+  thumbnail: ''
+
   # {'data scientist' | 'scientist' | 'educator'} The main targeted users
   user: ''
 ```
