@@ -1,3 +1,51 @@
+- bibtex: |-
+    @inproceedings{wangFarsightFosteringResponsible2024,
+      title = {Farsight: {{Fostering Responsible AI Awareness During AI Application Prototyping}}},
+      booktitle = {{{CHI Conference}} on {{Human Factors}} in {{Computing Systems}}},
+      author = {Wang, Zijie J. and Kulkarni, Chinmay and Wilcox, Lauren and Terry, Michael and Madaio, Michael},
+      year = {2024}
+    }
+  bibtexKey: wangFarsightFosteringResponsible2024
+  communication: one-way
+  description:
+    "Prompt-based interfaces for Large Language Models (LLMs) have made
+    prototyping and building AI-powered applications easier than ever before.
+    However, identifying potential harms that may arise from AI applications
+    remains a challenge, particularly during prompt-based prototyping. To
+    address this, we present Farsight, a novel in situ interactive tool that
+    helps people identify potential harms from the AI applications they are
+    prototyping. Based on a user's prompt, Farsight highlights news articles
+    about relevant AI incidents and allows users to explore and edit
+    LLM-generated use cases, stakeholders, and harms. We report design insights
+    from a co-design study with 10 AI prototypers and findings from a user study
+    with 42 AI prototypers. After using Farsight, AI prototypers in our user
+    study are better able to independently identify potential harms associated
+    with a prompt and find our tool more useful and usable than existing
+    resources. Their qualitative feedback also highlights that Farsight
+    encourages them to focus on end-users and think beyond immediate harms. We
+    discuss these findings and reflect on their implications for designing AI
+    prototyping experiences that meaningfully engage with AI harms. Farsight is
+    publicly accessible at: https://pair-code.github.io/farsight."
+  githubURL: https://github.com/PAIR-code/farsight
+  implementation: nova
+  layouts:
+    - on-demand
+  materials:
+    - runtime
+  modularity: modular
+  name: farsight
+  nameDisplay: Farsight
+  otherURLs: []
+  paperURL: https://arxiv.org/abs/2402.15350
+  releaseYear: 2024
+  sourceType: paper
+  supportedNotebooks:
+    - jupyter
+    - lab
+    - colab
+  thumbnail: farsight.jpg
+  user: data scientist
+
 - bibtex:
     "@inproceedings{wuB2BridgingCode2020,\n  title = {B2: {{Bridging Code}}\
     \ and {{Interactive Visualization}} in {{Computational Notebooks}}},\n  shorttitle\
@@ -3573,12 +3621,18 @@
   thumbnail: pypotree.webp
   user: data scientist
 
-- bibtex:
-    "@misc{eppersonAutoProfilerAutomaticallyProfile2022,\n  title = {{{AutoProfiler}}:\
-    \ {{Automatically}} Profile Dataframes in the {{Jupyter}} Sidebar},\n  author\
-    \ = {Epperson, Will},\n  year = {2022},\n  url = {https://github.com/cmudig/AutoProfiler},\n\
-    \  urldate = {2023-04-24}\n}\n"
-  bibtexKey: eppersonAutoProfilerAutomaticallyProfile2022
+- bibtex: |-
+    @article{eppersonDeadAliveContinuous2023,
+      title = {Dead or {{Alive}}: {{Continuous Data Profiling}} for {{Interactive Data Science}}},
+      shorttitle = {Dead or {{Alive}}},
+      author = {Epperson, Will and Gorantla, Vaishnavi and Moritz, Dominik and Perer, Adam},
+      year = {2023},
+      journal = {IEEE Transactions on Visualization and Computer Graphics},
+      doi = {10.1109/TVCG.2023.3327367},
+      url = {https://ieeexplore.ieee.org/document/10301695/},
+      urldate = {2024-03-09}
+    }
+  bibtexKey: eppersonDeadAliveContinuous2023
   communication: two-way
   description: Automatically profile dataframes in the Jupyter sidebar.
   githubURL: https://github.com/cmudig/AutoProfiler
@@ -5204,7 +5258,7 @@
   user: data scientist
 
 - bibtex:
-    "@misc{ToyplotInteractivePlotting2022,\n  title = {Toyplot: {{Interactive}}\
+    "@misc{sandianationallaboratoriesToyplotInteractivePlotting2022,\n  title = {Toyplot: {{Interactive}}\
     \ Plotting for {{Python}}.},\n  year = {2022},\n  url = {https://github.com/sandialabs/toyplot},\n\
     \  urldate = {2023-04-24},\n  howpublished = {Sandia National Laboratories}\n\
     }\n"
@@ -5672,7 +5726,7 @@
     \ Yanna and Li, Haotian and Yang, Leni and Wu, Aoyu and Qu, Huamin}, \n  journal={IEEE\
     \ Transactions on Visualization and Computer Graphics}, \n  year={2023}, \n  publisher={IEEE}\n\
     \ }\n"
-  bibtexKey: lin2023inksight
+  bibtexKey: linInkSightLeveragingSketch2023
   communication: one-way
   description:
     Computational notebooks have become increasingly popular for exploratory
