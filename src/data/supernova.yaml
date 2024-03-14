@@ -5262,7 +5262,7 @@
     \ Plotting for {{Python}}.},\n  year = {2022},\n  url = {https://github.com/sandialabs/toyplot},\n\
     \  urldate = {2023-04-24},\n  howpublished = {Sandia National Laboratories}\n\
     }\n"
-  bibtexKey: ToyplotInteractivePlotting2022
+  bibtexKey: sandianationallaboratoriesToyplotInteractivePlotting2022
   communication: one-way
   description: Interactive plotting for Python.
   githubURL: https://github.com/sandialabs/toyplot

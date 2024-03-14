@@ -174,7 +174,7 @@ $search-bar-gap: 8px;
   .chip {
     padding: 1px 7px;
     border-radius: 5px;
-    border: 1px solid hsla(0, 100%, 100%, 0.5);
+    border: 1px dashed hsla(0, 100%, 100%, 0.5);
 
     user-select: none;
     -webkit-user-select: none;
