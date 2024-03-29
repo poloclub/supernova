@@ -1,21 +1,21 @@
 # SuperNOVA <a href="https://poloclub.github.io/supernova/"><img align="right" src="public/android-chrome-192x192.png" width="30" height="30"></img></a>
 
-
 [![Github Actions Status](https://github.com/poloclub/supernova/workflows/build/badge.svg)](https://github.com/poloclub/supernova/actions/workflows/build.yml)
 [![license](https://img.shields.io/badge/License-MIT-blue)](https://github.com/poloclub/supernova/blob/master/LICENSE)
 [![arxiv badge](https://img.shields.io/badge/arXiv-2305.03039-red)](http://arxiv.org/abs/2305.03039)
+[![10.1145/3613905.3650848](https://img.shields.io/badge/DOI-10.1145/3613905.3650848-blue)](https://doi.org/10.1145/3613905.3650848)
 
 Design Strategies and Opportunities for Interactive Visualization in Computational Notebooks
 
 <table>
   <tr>
-    <td colspan="2"><a href="https://poloclub.github.io/supernova"><img src='https://i.imgur.com/wy2NbdR.png'></a></td>
+    <td colspan="3"><a href="https://poloclub.github.io/supernova"><img src='https://i.imgur.com/wy2NbdR.png'></a></td>
   </tr>
   <tr></tr>
   <tr align="center">
-    <td><a href="https://poloclub.github.io/supernova">🚀 Live Demo: Explore 161 notebook visual analytics tools in your browser!</a></td>
-    <!-- <td><a href="https://youtu.be/3eGqTmsStJM">📺 Demo Video</a></td>
-    <td><a href="https://youtu.be/l1mr9z1TuAk">👨🏻‍🏫 Conference Talk</a></td> -->
+    <td><a href="https://poloclub.github.io/supernova">🚀 Live Demo: Explore 160+ notebook visualization tools!</a></td>
+    <!-- <td><a href="https://youtu.be/3eGqTmsStJM">📺 Demo Video</a></td> -->
+    <td><a href="https://youtu.be/l1mr9z1TuAk">👨🏻‍🏫 Conference Talk</a></td>
     <td><a href="https://arxiv.org/abs/2305.03039">📖 Research Paper</a></td>
   </tr>
 </table>
@@ -23,6 +23,8 @@ Design Strategies and Opportunities for Interactive Visualization in Computation
 ## Overview
 
 SuperNOVA is an interactive tool to help researchers explore existing notebook VA tools and search for design inspiration and implementation references. Anyone can easily add new notebook VA tools to this open-source explorer.
+
+<video src="https://github.com/poloclub/supernova/assets/15007159/bd3fccef-4069-4ce9-8049-1548a70c7f83"></video>
 
 ## SuperNOVA Details
 
@@ -42,8 +44,7 @@ Make sure you have the necessary information for the entry you want to add, incl
 2. Use the following YAML template, and paste it below the last entry. For the definition details of each entry, please check out the [SuperNOVA paper](https://arxiv.org/abs/2305.03039).
 
 ```yaml
--
-  # {string} The bibtex of this entry
+- # {string} The bibtex of this entry
   bibtex: ''
 
   # {string} The bibtex key
@@ -110,6 +111,8 @@ Code for data collection and cleaned GitHub issues are at [`./metadata`](./metad
 SuperNOVA is created by <a href='https://zijie.wang/' target='_blank'>Jay Wang</a>, <a href='https://www.davidmunechika.com' target='_blank'>David Munechika</a>, <a href='http://www.seongmin.xyz' target='_blank'>Seongmin Lee</a>, and <a href='' target='_blank'>Polo Chau</a>.
 
 ## Citation
+
+To learn more about SuperNOVA, please read our [research paper](https://arxiv.org/abs/2305.03039) (published at [CHI 2024](https://chi2024.acm.org)).
 
 ```bibTeX
 @article{wangSuperNOVADesignStrategies2023,
