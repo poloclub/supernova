@@ -15,7 +15,7 @@ Design Strategies and Opportunities for Interactive Visualization in Computation
   <tr align="center">
     <td><a href="https://poloclub.github.io/supernova">🚀 Live Demo: Explore 160+ notebook visualization tools!</a></td>
     <!-- <td><a href="https://youtu.be/3eGqTmsStJM">📺 Demo Video</a></td> -->
-    <td><a href="https://youtu.be/l1mr9z1TuAk">👨🏻‍🏫 Conference Talk</a></td>
+    <td><a href="https://youtu.be/5kblx0l12Uw">👨🏻‍🏫 Conference Talk</a></td>
     <td><a href="https://arxiv.org/abs/2305.03039">📖 Research Paper</a></td>
   </tr>
 </table>
